@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://14sbgo2fey7t"]
+
+[node name="Control" type="Control" unique_id=264270160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_position = Vector2(-10, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1201037294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=271778757]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_position = Vector2(-10, 0)
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=655597397]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=540785011]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel" unique_id=1980074197]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer" unique_id=1767253067]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1849291869]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
+theme_override_font_sizes/font_size = 26
+text = "128"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1694976050]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
+theme_override_font_sizes/font_size = 18
+text = "Pacientes ativos"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=23430696]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+bbcode_enabled = true
+text = "[color=green]8 novos este mês[/color]"
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1477745058]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel2" unique_id=152084526]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel2/MarginContainer" unique_id=435607294]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=835923042]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
+theme_override_font_sizes/font_size = 26
+text = "8"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=1666398586]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
+theme_override_font_sizes/font_size = 18
+text = "Consultas hoje"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=1542851274]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+bbcode_enabled = true
+text = "[color=green]3 retornos [/color]"
+
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1291515557]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel3" unique_id=173660809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer" unique_id=1182757957]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=1453636275]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 26
+text = "24"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=76567867]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.37036434, 0.37036452, 0.37036446, 1)
+theme_override_font_sizes/font_size = 18
+text = "Planos para revisar"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=1986075420]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+bbcode_enabled = true
+text = "[color=green]5 atualizados hoje [/color]"
+
+[node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=575487696]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel4" unique_id=1439046161]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel4/MarginContainer" unique_id=1734494911]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel4/MarginContainer/VBoxContainer" unique_id=1398204475]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 26
+text = "5"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel4/MarginContainer/VBoxContainer" unique_id=1366288152]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = " Pendências"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel4/MarginContainer/VBoxContainer" unique_id=1190240550]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+bbcode_enabled = true
+text = "[color=yellow] 2 precisam de atenção [/color]"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1651534405]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1947482454]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel" unique_id=2113479614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer" unique_id=1620954083]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1896197899]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=856973565]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Consultas de hoje"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1058512867]
+layout_mode = 2
+text = "Ver agenda"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=946887308]
+layout_mode = 2
+
+[node name="lista_de_consultas" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=549636467]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="s_c_hoje" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=50852404]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "Sem consultas hoje"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=45288060]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2" unique_id=656376044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer" unique_id=1542216727]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=70313696]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1825225461]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Pendências"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer/HBoxContainer" unique_id=104916459]
+layout_mode = 2
+text = "Ver todas"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=1070205943]
+layout_mode = 2
+
+[node name="lista_de_pendencias" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=488126085]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="s_p_hoje" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=1092427274]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "Sem pendências para hoje"
+horizontal_alignment = 1
