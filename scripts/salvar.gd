@@ -1,3 +1,4 @@
+class_name Save_manager
 extends Node
 
 # ============================================================
@@ -6,13 +7,13 @@ extends Node
 
 # false = arquivo JSON normal
 # true  = arquivo criptografado
-const USAR_CRIPTOGRAFIA := false
+var USAR_CRIPTOGRAFIA := false
 
-const CAMINHO_DATA := "user://data.json"
+var CAMINHO_DATA := "user://data.json"
 
 # Senha usada para criptografar o arquivo.
 # Troque antes de publicar.
-const SENHA_DATA := "NutriPro_2026_Chave"
+var SENHA_DATA := "NutriPro_2026_Chave"
 
 
 # ============================================================
@@ -23,12 +24,6 @@ var data: Dictionary = {
 }
 
 
-# ============================================================
-# READY
-# ============================================================
-
-func _ready() -> void:
-	carregar_data()
 
 
 # ============================================================
@@ -83,12 +78,16 @@ func salvar_data() -> void:
 # CARREGAR DATA
 # ============================================================
 
-func carregar_data() -> void:
+func carregar_data() -> Dictionary:
+
+	# --------------------------------------------------------
+	# Verifica se o arquivo existe
+	# --------------------------------------------------------
 
 	if not FileAccess.file_exists(CAMINHO_DATA):
 		print("Nenhum arquivo de data encontrado.")
 		data = {}
-		return
+		return {}
 
 	var arquivo: FileAccess
 
@@ -115,7 +114,7 @@ func carregar_data() -> void:
 	if arquivo == null:
 		push_error("Não foi possível abrir o arquivo de data.")
 		data = {}
-		return
+		return {}
 
 	# --------------------------------------------------------
 	# Lê o JSON
@@ -135,9 +134,14 @@ func carregar_data() -> void:
 		data = resultado
 
 		print("Data carregada com sucesso!")
+
+		return data
+
 	else:
 		push_error("O arquivo não contém um Dictionary válido.")
 		data = {}
+
+		return {}
 
 
 # ============================================================
@@ -156,7 +160,7 @@ func apagar_data() -> void:
 
 	data = {}
 
-	print("Data apagada!")
+	#print("Data apagada!")
 
 
 # ============================================================

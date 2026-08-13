@@ -1,0 +1,1184 @@
+[gd_scene format=3 uid="uid://byxln54yo5uk3"]
+
+[ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_7qvr5"]
+[ext_resource type="Script" uid="uid://dgrkbanok1off" path="res://scripts/anamnese.gd" id="1_iwnkf"]
+[ext_resource type="Script" uid="uid://dthw6ykk8g1s0" path="res://scripts/manual.gd" id="2_obhn4"]
+[ext_resource type="Script" uid="uid://cij6emyghysp8" path="res://scripts/doc.gd" id="3_n730p"]
+
+[node name="Control" type="Control" unique_id=1729133135]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iwnkf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2083085308]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=821554364]
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=95051164]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1046210280]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1416561632]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1479723018]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel" unique_id=1353284983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer" unique_id=800972322]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1909725384]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Novo Paciente"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1036195253]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Prefere usar um doc ou preencher tudo manumanmente?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1731873030]
+layout_mode = 2
+
+[node name="btn_manual" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1341386528]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Manualmente"
+
+[node name="btn_doc" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1015235827]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Usar doc"
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=786932027]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1076480131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="manual" type="HBoxContainer" parent="MarginContainer" unique_id=856326275]
+layout_mode = 2
+script = ExtResource("2_obhn4")
+
+[node name="Control" type="Control" parent="MarginContainer/manual" unique_id=955506857]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual" unique_id=464378692]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="Control" type="Control" parent="MarginContainer/manual/VBoxContainer" unique_id=1068023843]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="dados_pessoais" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1026450509]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais" unique_id=123521463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer" unique_id=1736108831]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=73087777]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Dados pessoais"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1823465724]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1447687204]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2029293392]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nome completo"
+
+[node name="TextEdit_nome" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1945344372]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=519850585]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=405878359]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Data de nascimento"
+
+[node name="TextEdit_data_de_nascimento" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1118522606]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1845293228]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=552358856]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sexo"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=425020782]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton_sexo" type="OptionButton" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=379330538]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 3
+popup/item_0/text = "Masculino"
+popup/item_0/id = 0
+popup/item_1/text = "Feminino"
+popup/item_1/id = 1
+popup/item_2/text = "Prefiro não informar"
+popup/item_2/id = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=766430566]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1668636974]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Telefone"
+
+[node name="TextEdit_telefone" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1814478334]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1886345274]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=291347652]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "E-mail"
+
+[node name="TextEdit_e_mail" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1016417027]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=500317919]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1350737236]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Profissão"
+
+[node name="TextEdit_profissao" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=2144528030]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=146677305]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=212180602]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Endereço"
+
+[node name="TextEdit_endreco" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=1024588135]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1191643159]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer8" unique_id=1653079282]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Estado civil"
+
+[node name="TextEdit_estado_civil" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer8" unique_id=2047077703]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1512953324]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer9" unique_id=957398830]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Filhos"
+
+[node name="TextEdit_filhos" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer9" unique_id=993420313]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1992494062]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=413984320]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=546733508]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="objetivo" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=2096619304]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/objetivo" unique_id=2079789911]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer" unique_id=498247957]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=273343149]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Objetivo da consulta"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=620657540]
+layout_mode = 2
+value = 11.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=277202654]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1757074750]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Qual é o seu principal objetivo?"
+
+[node name="OptionButton_objetivo" type="OptionButton" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1269847627]
+layout_mode = 2
+size_flags_horizontal = 4
+selected = 0
+item_count = 6
+popup/item_0/text = "Emagrecimento"
+popup/item_0/id = 0
+popup/item_1/text = "Ganho de massa muscular"
+popup/item_1/id = 1
+popup/item_2/text = "Manutenção do peso"
+popup/item_2/id = 2
+popup/item_3/text = "Performance esportiva"
+popup/item_3/id = 3
+popup/item_4/text = "Melhora da saúde"
+popup/item_4/id = 4
+popup/item_5/text = "Outro"
+popup/item_5/id = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=2084967260]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1005346421]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "O que você espera alcançar com o acompanhamento?"
+
+[node name="TextEdit_o_que_espera_alcancar" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=681881402]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Digite aqui"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer" unique_id=55881882]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1583153500]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=838047998]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="dados" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=270532017]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/dados" unique_id=961320514]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer" unique_id=964458268]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=736417663]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Dados corporais"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=1988484186]
+layout_mode = 2
+value = 22.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=1279499942]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1657826678]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Peso atual (kg)"
+
+[node name="TextEdit_peso_atual" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer" unique_id=216994405]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=938512186]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=471003567]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Altura (cm) "
+
+[node name="TextEdit_altura" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=969273359]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=1415331896]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=440881667]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Peso desejado (kg) "
+
+[node name="TextEdit_peso_desejado" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1067541041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=631183445]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2136841604]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Circunferência da cintura (cm)"
+
+[node name="TextEdit_circunferencia_da_cintura" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2108411304]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=234781528]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=637209990]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Circunferência do quadril (cm)"
+
+[node name="TextEdit_circunferencia_do_quadril" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1996725927]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=1865803267]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1380830685]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " % de gordura corporal "
+
+[node name="TextEdit_porcentagem_de_gordura" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1620358895]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=101548484]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer" unique_id=56631095]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=93007514]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1226879900]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="historico" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1714508020]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/historico" unique_id=1316492230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer" unique_id=879483098]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=267266952]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Histórico de saúde"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=260663181]
+layout_mode = 2
+value = 33.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=722520974]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer" unique_id=367259944]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Possui alguma doença ou condição de saúde? "
+
+[node name="TextEdit_doenca" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer" unique_id=450835190]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=375233788]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1685717972]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Já realizou alguma cirurgia? "
+
+[node name="TextEdit_cirurgia" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1088029165]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=300221757]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1570384220]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Possui alergias ou intolerâncias alimentares? "
+
+[node name="TextEdit_alergias" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=249120386]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=375769672]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1235296841]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Utiliza medicamentos? "
+
+[node name="TextEdit_medicamentos" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1326627808]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=264454087]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=228110471]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Utiliza suplementos? "
+
+[node name="TextEdit_suplementos" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=344864816]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=785055208]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1410801210]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Existe histórico familiar de doenças importantes? "
+
+[node name="TextEdit_historico_familiar" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=975350415]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=1014992946]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer" unique_id=2015071199]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1239774581]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1156696202]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="habitos" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1608974841]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/habitos" unique_id=1781186723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer" unique_id=723312350]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1968075959]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Hábitos alimentares"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1434980058]
+layout_mode = 2
+value = 44.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=999372332]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1461544395]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quantas refeições faz por dia?"
+
+[node name="TextEdit_numero_de_refeicoes" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer" unique_id=102320310]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=746309778]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1179215715]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quantidade aproximada de água por dia"
+
+[node name="TextEdit_agua_por_dia" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=736608329]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1244723972]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1809780350]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Frequência de refeições fora de casa"
+
+[node name="TextEdit_freq_refeicoes_fora" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1138537937]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1915721746]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=780069087]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Alimentos que gosta"
+
+[node name="TextEdit_alimentos_que_gosta" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=724955380]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1665146581]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=621031619]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Alimentos que não gosta"
+
+[node name="TextEdit_alimentos_que_nao_gosta" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1050174688]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1415586616]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=912597664]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Restrições ou preferências alimentares"
+
+[node name="TextEdit_resticoes_alimentares" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=147087717]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=1864791134]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=645853602]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Como considera seu apetite?"
+
+[node name="TextEdit_apetite" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=779478828]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=750727169]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer" unique_id=148923485]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=2003796222]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1069662978]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="recordatorio" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1868138092]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio" unique_id=853407500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer" unique_id=1139499561]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1463154778]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Recordatório alimentar"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1650188272]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = " Descreva o que normalmente consome em cada horário. 
+Informe alimentos e quantidades aproximadas. "
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=627787589]
+layout_mode = 2
+value = 55.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=109791843]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1532582802]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Café da manhã"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1972857550]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=738878108]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1157984382]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lanche da manhã"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=380634090]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=125968041]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=647535986]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Almoço"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1161154473]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1549526180]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1300174346]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lanche da tarde"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1342267151]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1184796382]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1634072840]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jantar"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1639677698]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=2120529611]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1169440136]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ceia"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1159266253]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit_recordatorio" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1832208401]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "exempo:
+7:00  comi uma maça"
+
+[node name="Label3" type="Label" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=1812516865]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer" unique_id=453336318]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=988092171]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=211934956]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="estilo_de_vida" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1989464636]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida" unique_id=458268845]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer" unique_id=1230964735]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1365543504]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Estilo de vida"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=444865833]
+layout_mode = 2
+value = 66.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=2122924648]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1267397275]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pratica atividade física?"
+
+[node name="TextEdit_pratica_atividade" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer" unique_id=135318683]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=831658733]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1183417216]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Qual atividade pratica?"
+
+[node name="TextEdit_qual_atividade" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=448699223]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=61417101]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=587987213]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Horas de sono por noite"
+
+[node name="TextEdit_horas_sono" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=53442427]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1523200394]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1705577452]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Qualidade do sono"
+
+[node name="TextEdit_qualidade_sono" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1458148931]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1569471637]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=217233594]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Consome bebidas alcoólicas?"
+
+[node name="TextEdit_alcool" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1300479018]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1767792040]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1671511222]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Como é sua rotina diária? "
+
+[node name="TextEdit_rotina" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1563162267]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Digite aqui"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer" unique_id=1352047637]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1620949835]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1738557480]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Próximo"
+
+[node name="informacoes_adicionais" type="Panel" parent="MarginContainer/manual/VBoxContainer" unique_id=1660917851]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais" unique_id=1867980289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer" unique_id=988438576]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer" unique_id=1519864104]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Informações adicionais"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer" unique_id=1211902150]
+layout_mode = 2
+value = 77.0
+
+[node name="Label3" type="Label" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer" unique_id=1444731524]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Existe alguma informação importante que gostaria de contar à nutricionista? "
+autowrap_mode = 3
+
+[node name="TextEdit_outro" type="TextEdit" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer" unique_id=1459398852]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Digite aqui"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer" unique_id=877924301]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=1843223981]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_confirmar" type="Button" parent="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=939921424]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Salvar"
+
+[node name="Control2" type="Control" parent="MarginContainer/manual/VBoxContainer" unique_id=1671050172]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/manual" unique_id=1622254590]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="doc" type="HBoxContainer" parent="MarginContainer" unique_id=1999999074]
+visible = false
+layout_mode = 2
+script = ExtResource("3_n730p")
+
+[node name="Control" type="Control" parent="MarginContainer/doc" unique_id=1261438673]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/doc" unique_id=1941535501]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Control" type="Control" parent="MarginContainer/doc/VBoxContainer" unique_id=958151335]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/doc/VBoxContainer" unique_id=310106937]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/doc/VBoxContainer/Panel" unique_id=561049845]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer" unique_id=1840965348]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=537165084]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1471878776]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="Label" type="Label" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=832116509]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Anamnese"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1876432362]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1442766516]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Não é recomendado alterar o documento, trocar titulos, campos, fundo ... , apenas preencher os campos destacados."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=211385986]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2084313080]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gerar documento"
+
+[node name="Button2" type="Button" parent="MarginContainer/doc/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2118588624]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_7qvr5")
+text = "Analizar documento"
+
+[node name="Control2" type="Control" parent="MarginContainer/doc/VBoxContainer" unique_id=1737528028]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/doc" unique_id=655307706]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_manual" to="." method="_on_btn_manual_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_doc" to="." method="_on_btn_doc_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_nome" to="MarginContainer/manual" method="_on_text_edit_nome_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit_data_de_nascimento" to="MarginContainer/manual" method="_on_text_edit_data_de_nascimento_text_changed"]
+[connection signal="item_selected" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3/OptionButton_sexo" to="MarginContainer/manual" method="_on_option_button_sexo_item_selected"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_telefone" to="MarginContainer/manual" method="_on_text_edit_telefone_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_e_mail" to="MarginContainer/manual" method="_on_text_edit_e_mail_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_profissao" to="MarginContainer/manual" method="_on_text_edit_profissao_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer7/TextEdit_endreco" to="MarginContainer/manual" method="_on_text_edit_endreco_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer8/TextEdit_estado_civil" to="MarginContainer/manual" method="_on_text_edit_estado_civil_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer9/TextEdit_filhos" to="MarginContainer/manual" method="_on_text_edit_filhos_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="." method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="item_selected" from="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer/OptionButton_objetivo" to="MarginContainer/manual" method="_on_option_button_objetivo_item_selected"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/TextEdit_o_que_espera_alcancar" to="MarginContainer/manual" method="_on_text_edit_o_que_espera_alcancar_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/objetivo/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_peso_atual" to="MarginContainer/manual" method="_on_text_edit_peso_atual_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit_altura" to="MarginContainer/manual" method="_on_text_edit_altura_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_peso_desejado" to="MarginContainer/manual" method="_on_text_edit_peso_desejado_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_circunferencia_da_cintura" to="MarginContainer/manual" method="_on_text_edit_circunferencia_da_cintura_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_circunferencia_do_quadril" to="MarginContainer/manual" method="_on_text_edit_circunferencia_do_quadril_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_porcentagem_de_gordura" to="MarginContainer/manual" method="_on_text_edit_porcentagem_de_gordura_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/dados/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_doenca" to="MarginContainer/manual" method="_on_text_edit_doenca_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit_cirurgia" to="MarginContainer/manual" method="_on_text_edit_cirurgia_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_alergias" to="MarginContainer/manual" method="_on_text_edit_alergias_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_medicamentos" to="MarginContainer/manual" method="_on_text_edit_medicamentos_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_suplementos" to="MarginContainer/manual" method="_on_text_edit_suplementos_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_historico_familiar" to="MarginContainer/manual" method="_on_text_edit_historico_familiar_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/historico/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_numero_de_refeicoes" to="MarginContainer/manual" method="_on_text_edit_numero_de_refeicoes_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit_agua_por_dia" to="MarginContainer/manual" method="_on_text_edit_agua_por_dia_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_freq_refeicoes_fora" to="MarginContainer/manual" method="_on_text_edit_freq_refeicoes_fora_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_alimentos_que_gosta" to="MarginContainer/manual" method="_on_text_edit_alimentos_que_gosta_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_alimentos_que_nao_gosta" to="MarginContainer/manual" method="_on_text_edit_alimentos_que_nao_gosta_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_resticoes_alimentares" to="MarginContainer/manual" method="_on_text_edit_resticoes_alimentares_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer7/TextEdit_apetite" to="MarginContainer/manual" method="_on_text_edit_apetite_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/habitos/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/TextEdit_recordatorio" to="MarginContainer/manual" method="_on_text_edit_recordatorio_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/recordatorio/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_pratica_atividade" to="MarginContainer/manual" method="_on_text_edit_pratica_atividade_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit_qual_atividade" to="MarginContainer/manual" method="_on_text_edit_qual_atividade_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_horas_sono" to="MarginContainer/manual" method="_on_text_edit_horas_sono_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_qualidade_sono" to="MarginContainer/manual" method="_on_text_edit_qualidade_sono_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_alcool" to="MarginContainer/manual" method="_on_text_edit_alcool_text_changed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/TextEdit_rotina" to="MarginContainer/manual" method="_on_text_edit_rotina_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/estilo_de_vida/MarginContainer/VBoxContainer/HBoxContainer10/btn_next" to="MarginContainer/manual" method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer/TextEdit_outro" to="MarginContainer/manual" method="_on_text_edit_outro_text_changed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer/HBoxContainer10/btn_prev" to="MarginContainer/manual" method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="MarginContainer/manual/VBoxContainer/informacoes_adicionais/MarginContainer/VBoxContainer/HBoxContainer10/btn_confirmar" to="MarginContainer/manual" method="_on_btn_confirmar_pressed"]

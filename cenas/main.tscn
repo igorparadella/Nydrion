@@ -28,6 +28,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4fhxt")
 
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1838647220]
+script = ExtResource("4_b30p5")
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=521631676]
 layout_mode = 1
 anchors_preset = 15
@@ -66,15 +69,17 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=1327477544]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(0.8, 0.8)
+size_flags_vertical = 4
 texture = ExtResource("1_mtgg2")
-expand_mode = 5
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=303867339]
+visible = false
 layout_mode = 2
-text = "adfdf"
+text = "Principal"
 
 [node name="btn_visao_geral" type="Button" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=175931498]
 layout_mode = 2
@@ -93,14 +98,17 @@ layout_mode = 2
 text = "Cálculos"
 
 [node name="Label2" type="Label" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=2072749882]
+visible = false
 layout_mode = 2
-text = "adfdf"
+text = "Sistema"
 
 [node name="Button3" type="Button" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=217913961]
+visible = false
 layout_mode = 2
 text = "teste"
 
 [node name="Button4" type="Button" parent="HBoxContainer/TextureRect/MarginContainer/VBoxContainer" unique_id=692840680]
+visible = false
 layout_mode = 2
 text = "teste"
 
@@ -112,13 +120,11 @@ theme_override_constants/separation = 0
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control" parent="HBoxContainer/Control" unique_id=1846323344 instance=ExtResource("2_t4ukd")]
+[node name="MarginContainer" parent="HBoxContainer/Control" unique_id=1846323344 instance=ExtResource("2_t4ukd")]
 layout_mode = 1
-
-[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1838647220]
-script = ExtResource("4_b30p5")
 
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_visao_geral" to="." method="_on_btn_visao_geral_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_pacientes" to="." method="_on_btn_pacientes_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_agenda" to="." method="_on_btn_agenda_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_calculos" to="." method="_on_btn_calculos_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

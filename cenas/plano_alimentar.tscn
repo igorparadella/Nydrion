@@ -1,0 +1,919 @@
+[gd_scene format=3 uid="uid://bpryebl7x7sb7"]
+
+[ext_resource type="Script" uid="uid://wc8b2xqdltvh" path="res://scripts/plano_alimentar.gd" id="1_gcqdg"]
+[ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_n4cp6"]
+[ext_resource type="PackedScene" uid="uid://oen3qgbb4im3" path="res://prefab/grafico_radar.res" id="3_tm8r0"]
+[ext_resource type="PackedScene" uid="uid://bch5a51qdw26b" path="res://prefab/plano_alimentar/alimento_plano.res" id="4_k4qpn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eehox"]
+bg_color = Color(0.56763506, 0.5676352, 0.567635, 0.60784316)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7ugd"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eehox"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 0.0
+content_margin_bottom = 5.0
+
+[node name="Control" type="Control" unique_id=1361814560]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gcqdg")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=453998155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1661326848]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=367740119]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Panel" unique_id=213029438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer" unique_id=433722248]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=2036656785]
+layout_mode = 2
+
+[node name="btn_voltar" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2109735539]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1452601147]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Plano alimentar"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=83867646]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Modelos"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=709877945]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=68817241]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=936820111]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1619271720]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel" unique_id=383313610]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer" unique_id=688717188]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1479587576]
+layout_mode = 2
+text = "Domingo"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1359720729]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2082178142]
+layout_mode = 2
+text = "6:00"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=663571004]
+layout_mode = 2
+text = "        "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1226773514]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1 pão com manteiga e café"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=614140520]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=820770861]
+layout_mode = 2
+text = "10:00"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=939580304]
+layout_mode = 2
+text = "      "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=965691315]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1 pão com manteiga e café"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=2098483348]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=2018785509]
+layout_mode = 2
+text = "12:00"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1953883900]
+layout_mode = 2
+text = "      "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1838404469]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4 colheres de arroz 2 de feijão 2 costelas e couve"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=700433152]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=434653967]
+layout_mode = 2
+text = "10:00"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1268620100]
+layout_mode = 2
+text = "      "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1323553431]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1 pão com manteiga e café"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1792163612]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=121384863]
+layout_mode = 2
+text = "12:00"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=219427259]
+layout_mode = 2
+text = "      "
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1606944188]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4 colheres de arroz 2 de feijão 2 costelas e couve"
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1784342206]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "Vazio"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=721403440]
+layout_mode = 2
+
+[node name="btn_abrir_nova_refeicao" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1541485995]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Adicionar nova refeição"
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1136976043]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_n4cp6")
+text = "Imprimir"
+
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1555894569]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_n4cp6")
+text = "Salvar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1849211185]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 10
+
+[node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=443539435]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3" unique_id=905867301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer" unique_id=247279535]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=418681996]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=897375563]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Medidores"
+horizontal_alignment = 1
+
+[node name="medidor" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2106839925]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor" unique_id=449548863]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "adsfdf"
+
+[node name="nome2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor" unique_id=933590147]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "13.4k/g"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor" unique_id=860123940]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="nome3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor/VBoxContainer" unique_id=584409779]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor/VBoxContainer" unique_id=1910726528]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "(12%)"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor" unique_id=1435909445]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="medidor2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1651046275]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2" unique_id=1342210187]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "adsfdf"
+
+[node name="nome2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2" unique_id=1480130203]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "13.4k/g"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2" unique_id=647208982]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="nome3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2/VBoxContainer" unique_id=324983992]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2/VBoxContainer" unique_id=2060081320]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "(12%)"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2" unique_id=400162012]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="medidor3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=950910034]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3" unique_id=1132472914]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "adsfdf"
+
+[node name="nome2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3" unique_id=676381023]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "13.4k/g"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3" unique_id=1663690967]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="nome3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3/VBoxContainer" unique_id=2086808890]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3/VBoxContainer" unique_id=2134642298]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "(12%)"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3" unique_id=1202975291]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="medidor4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=898515839]
+layout_mode = 2
+
+[node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4" unique_id=991799067]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "adsfdf"
+
+[node name="nome2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4" unique_id=426825361]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "13.4k/g"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4" unique_id=1173072525]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="nome3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4/VBoxContainer" unique_id=252481808]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4/VBoxContainer" unique_id=783481626]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "(12%)"
+horizontal_alignment = 1
+
+[node name="nome4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4" unique_id=2088583333]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16.4k/g"
+horizontal_alignment = 1
+
+[node name="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=1512311512 instance=ExtResource("3_tm8r0")]
+layout_mode = 2
+size_flags_vertical = 3
+raio = 75.0
+cor_fundo = Color(1, 1, 1, 0.8)
+cor_texto = Color(0, 0, 0, 1)
+tamanho_texto = 12
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=619907327]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Editar medidores"
+
+[node name="Panel" type="Panel" parent="." unique_id=2016966590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eehox")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1543001342]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1176223315]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Panel/HBoxContainer" unique_id=1214166174]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=245508333]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Control" type="Control" parent="Panel/HBoxContainer/VBoxContainer" unique_id=755549704]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1466327679]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel" unique_id=1185588361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer" unique_id=130283121]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=822862369]
+layout_mode = 2
+
+[node name="btn_criar_refeicao" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1509512823]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fechar"
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=177127509]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_font_sizes/font_size = 18
+text = "Refeição"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1698062327]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=943589618]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=593785074]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer" unique_id=326667684]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=764159370]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Dia da semana:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1885142868]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 8
+popup/item_0/text = "Domingo"
+popup/item_0/id = 0
+popup/item_1/text = "Segunda"
+popup/item_1/id = 1
+popup/item_2/text = "Terça"
+popup/item_2/id = 2
+popup/item_3/text = "Quarta"
+popup/item_3/id = 3
+popup/item_4/text = "Quinta"
+popup/item_4/id = 4
+popup/item_5/text = "Sexta"
+popup/item_5/id = 5
+popup/item_6/text = "Sabádo"
+popup/item_6/id = 6
+popup/item_7/text = "Todos os dias"
+popup/item_7/id = 7
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer" unique_id=278174477]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=47187648]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Horário:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=864748020]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=725215382]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+placeholder_text = "7:00"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=112580422]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer" unique_id=739788760]
+layout_mode = 2
+theme = ExtResource("1_n4cp6")
+theme_override_font_sizes/font_size = 10
+text = "⬆"
+
+[node name="Button2" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer" unique_id=429065328]
+layout_mode = 2
+theme = ExtResource("1_n4cp6")
+theme_override_font_sizes/font_size = 10
+text = "⬇"
+
+[node name="Panel" type="Panel" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1934657415]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/Panel" unique_id=1093281927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/Panel/MarginContainer" unique_id=893531421]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v7ugd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer" unique_id=1179454865]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 0)
+
+[node name="Panel" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=438982971 instance=ExtResource("4_k4qpn")]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer" unique_id=552705217]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer5" unique_id=1493831422]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Novo alimento"
+
+[node name="Button3" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer5" unique_id=1231598877]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4cp6")
+text = "Salvar"
+
+[node name="Control2" type="Control" parent="Panel/HBoxContainer/VBoxContainer" unique_id=561473297]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="Panel/HBoxContainer" unique_id=524039611]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="." unique_id=2124553999]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eehox")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2" unique_id=1785697584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer" unique_id=1779661634]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Panel2/MarginContainer/VBoxContainer" unique_id=322635841]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer" unique_id=580810590]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Panel" type="Panel" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer" unique_id=522875273]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel" unique_id=609394591]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer" unique_id=2019939195]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=609934353]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="btn_fechar_escolha_de_alimento" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1699684443]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=7255358]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+text = "Escolha um Alimento"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=325572218]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=286411610]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=2133089517]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1717105827]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1697317069]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Qual o nome do alimendo?"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=724867895]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=252245394]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nenhum alimento encontrado"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1196726972]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel" unique_id=1392314689]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer" unique_id=1349406258]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eehox")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer" unique_id=610603904]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-5, 0)
+
+[node name="Button2" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1147309638]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button3" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1258379300]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button4" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1317620017]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button5" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1342356016]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button6" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=111194137]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button7" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=150175377]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button8" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=691657577]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button9" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=485492115]
+layout_mode = 2
+text = "Arroz"
+
+[node name="Button10" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=11219477]
+layout_mode = 2
+text = "Arroz"
+
+[node name="filtros" type="Panel" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=48233375]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros" unique_id=1540333479]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer" unique_id=1724689383]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=1871502002]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1116934014]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grupo:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer" unique_id=640434840]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=777319184]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1351996158]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fator 1:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1257001137]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=640862969]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1977938748]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fator 1:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=258594415]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=794974510]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1224239807]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fator 1:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1209555991]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=840784881]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1932422980]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fator 1:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1934390359]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=111040041]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=46357616]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fator 1:"
+
+[node name="OptionButton" type="OptionButton" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=581775200]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer2/filtros/MarginContainer/VBoxContainer" unique_id=81298666]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_n4cp6")
+text = "Filtrar"
+
+[node name="Panel3" type="Panel" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer" unique_id=569649350]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel3" unique_id=392384233]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer" unique_id=1802847175]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=499741035]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_font_sizes/font_size = 18
+text = "Alimento"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=2011584695]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer" unique_id=553065028]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 5.0
+theme_override_font_sizes/font_size = 14
+text = "Selecione um alimento
+par ver suas informações"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="Panel2/MarginContainer/VBoxContainer" unique_id=1206277222]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_voltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_abrir_nova_refeicao" to="." method="_on_btn_abrir_nova_refeicao_pressed"]
+[connection signal="pressed" from="Panel2/MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5/btn_fechar_escolha_de_alimento" to="." method="_on_btn_fechar_escolha_de_alimento_pressed"]

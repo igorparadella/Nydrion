@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://crho84vwstcn5"]
+
+[ext_resource type="Script" uid="uid://d32ql4tuoc73e" path="res://scripts/numerico.gd" id="1_dists"]
+[ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_gqjvo"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=1614296836]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource("1_dists")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=848245776]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=800090726]
+layout_mode = 2
+
+[node name="mais" type="Button" parent="VBoxContainer" unique_id=394422164]
+layout_mode = 2
+theme = ExtResource("1_gqjvo")
+theme_override_font_sizes/font_size = 10
+text = "⬆"
+
+[node name="menos" type="Button" parent="VBoxContainer" unique_id=912538630]
+layout_mode = 2
+theme = ExtResource("1_gqjvo")
+theme_override_font_sizes/font_size = 10
+text = "⬇"
+
+[connection signal="pressed" from="VBoxContainer/mais" to="." method="_on_mais_pressed"]
+[connection signal="pressed" from="VBoxContainer/menos" to="." method="_on_menos_pressed"]

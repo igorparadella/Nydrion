@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://14sbgo2fey7t"]
 
+[ext_resource type="Script" uid="uid://bg5e0ppxpnbjg" path="res://scripts/visao_geral.gd" id="1_awqr7"]
+
 [node name="Control" type="Control" unique_id=264270160]
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +12,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 offset_transform_position = Vector2(-10, 0)
+script = ExtResource("1_awqr7")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1201037294]
 layout_mode = 1
@@ -72,7 +75,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
 bbcode_enabled = true
-text = "[color=green]8 novos este mês[/color]"
+text = "[color=72b879]8 novos este mês[/color]"
 
 [node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1477745058]
 layout_mode = 2
@@ -111,7 +114,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
 bbcode_enabled = true
-text = "[color=green]3 retornos [/color]"
+text = "[color=72b879]3 retornos [/color]"
 
 [node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1291515557]
 layout_mode = 2
@@ -149,7 +152,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
 bbcode_enabled = true
-text = "[color=green]5 atualizados hoje [/color]"
+text = "[color=72b879]5 atualizados hoje [/color]"
 
 [node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=575487696]
 layout_mode = 2
@@ -222,7 +225,7 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Consultas de hoje"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1058512867]
+[node name="abrir_agenda" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1058512867]
 layout_mode = 2
 text = "Ver agenda"
 
@@ -287,3 +290,5 @@ size_flags_vertical = 6
 theme_override_font_sizes/font_size = 18
 text = "Sem pendências para hoje"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer/abrir_agenda" to="." method="_on_abrir_agenda_pressed"]

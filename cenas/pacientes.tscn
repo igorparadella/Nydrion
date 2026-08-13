@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://ckiif4essw1ai"]
+
+[ext_resource type="Script" uid="uid://daw00cs0gg4rw" path="res://scripts/pacientes.gd" id="1_gy6hu"]
+[ext_resource type="PackedScene" uid="uid://bdae33t3fxt0d" path="res://prefab/pacientes/paciente.res" id="1_uow6t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1raa"]
+content_margin_left = 20.0
+
+[node name="Control" type="Control" unique_id=1043256827]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gy6hu")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=352134641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1061778134]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1014329026]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel" unique_id=1129929120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=1500570552]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=1638446379]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Pesquisar por nome, e-mail ou telefone"
+
+[node name="btn_pesquisar" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=1370512772]
+layout_mode = 2
+text = "Pesquisar"
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=604690584]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel2" unique_id=553981421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer" unique_id=1297725090]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=247049910]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r1raa")
+
+[node name="lista_pacientes" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/ScrollContainer" unique_id=229303381]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 0)
+
+[node name="paciente" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/ScrollContainer/lista_pacientes" unique_id=297052988 instance=ExtResource("1_uow6t")]
+layout_mode = 2
+
+[node name="btn_novo_paciente" type="Button" parent="MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer" unique_id=2052948403]
+layout_mode = 2
+text = "Adicionar paciente"
+
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/btn_pesquisar" to="." method="_on_btn_pesquisar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/btn_novo_paciente" to="." method="_on_btn_novo_paciente_pressed"]

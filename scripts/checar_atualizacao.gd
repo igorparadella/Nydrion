@@ -1,5 +1,6 @@
 extends HTTPRequest
 
+const printar = false
 
 # ============================================================
 # CONFIGURAÇÃO
@@ -8,7 +9,6 @@ extends HTTPRequest
 const VERSAO_ATUAL := "0.0.0"
 
 const VERSION_URL := "https://raw.githubusercontent.com/igorparadella/nutri/main/version.json"
-
 
 # ============================================================
 # INICIALIZAÇÃO
@@ -25,12 +25,12 @@ func _ready() -> void:
 # ============================================================
 
 func verificar_atualizacao() -> void:
-	print("Verificando atualização...")
+	#if printar: print("Verificando atualização...")
 
 	var erro := request(VERSION_URL)
 
 	if erro != OK:
-		print("Erro ao iniciar requisição: ", erro)
+		printerr("Erro ao iniciar requisição: ", erro)
 
 
 # ============================================================
@@ -49,8 +49,8 @@ func _on_request_completed(
 	# --------------------------------------------------------
 
 	if result != HTTPRequest.RESULT_SUCCESS:
-		print("Erro na conexão com o servidor.")
-		print("Código do erro: ", result)
+		printerr("Erro na conexão com o servidor.")
+		printerr("Código do erro: ", result)
 		return
 
 
@@ -59,7 +59,7 @@ func _on_request_completed(
 	# --------------------------------------------------------
 
 	if response_code != 200:
-		print("GitHub retornou código HTTP: ", response_code)
+		if printar: print("GitHub retornou código HTTP: ", response_code)
 		return
 
 
@@ -69,8 +69,8 @@ func _on_request_completed(
 
 	var texto := body.get_string_from_utf8()
 
-	print("Resposta recebida:")
-	print(texto)
+	if printar: print("Resposta recebida:")
+	if printar: print(texto)
 
 
 	# --------------------------------------------------------
@@ -82,8 +82,8 @@ func _on_request_completed(
 	var erro := json.parse(texto)
 
 	if erro != OK:
-		print("Erro ao interpretar version.json")
-		print(json.get_error_message())
+		printerr("Erro ao interpretar version.json")
+		printerr(json.get_error_message())
 		return
 
 
@@ -95,12 +95,12 @@ func _on_request_completed(
 	# --------------------------------------------------------
 
 	if typeof(dados) != TYPE_DICTIONARY:
-		print("version.json inválido.")
+		printerr("version.json inválido.")
 		return
 
 
 	if not dados.has("version"):
-		print("version.json não possui versão.")
+		printerr("version.json não possui versão.")
 		return
 
 
@@ -110,10 +110,10 @@ func _on_request_completed(
 
 	var versao_remota: String = str(dados["version"])
 
-	print("--------------------------------")
-	print("Versão instalada: ", VERSAO_ATUAL)
-	print("Versão disponível: ", versao_remota)
-	print("--------------------------------")
+	if printar: print("--------------------------------")
+	if printar: print("Versão instalada: ", VERSAO_ATUAL)
+	if printar: print("Versão disponível: ", versao_remota)
+	if printar: print("--------------------------------")
 
 
 	# --------------------------------------------------------
@@ -122,14 +122,14 @@ func _on_request_completed(
 
 	if existe_atualizacao(VERSAO_ATUAL, versao_remota):
 
-		print("🚀 NOVA ATUALIZAÇÃO DISPONÍVEL!")
+		if printar: print("🚀 NOVA ATUALIZAÇÃO DISPONÍVEL!")
 
 		if dados.has("url"):
-			print("Download: ", dados["url"])
+			if printar: print("Download: ", dados["url"])
 
 	else:
 
-		print("✅ O projeto está atualizado.")
+		if printar: print("✅ O projeto está atualizado.")
 
 
 # ============================================================

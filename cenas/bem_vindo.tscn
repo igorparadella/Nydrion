@@ -1,0 +1,775 @@
+[gd_scene format=3 uid="uid://qgd78ufu2hnn"]
+
+[ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_lkeka"]
+[ext_resource type="Script" uid="uid://bfmixs3h2yomn" path="res://scripts/bem_vindo.gd" id="1_trcn8"]
+[ext_resource type="Texture2D" uid="uid://dydptqxmpitdy" path="res://texturas/icon.png" id="3_811ap"]
+
+[sub_resource type="Gradient" id="Gradient_vabh6"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.88235295, 1, 0.85882354, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7lqj4"]
+gradient = SubResource("Gradient_vabh6")
+
+[node name="Control" type="Control" unique_id=1847527188]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trcn8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=308627385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_7lqj4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=211954545]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=598866930]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=413483050]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=900019942]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer" unique_id=1386037515]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/Panel" unique_id=979041684]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer" unique_id=1410611931]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=493223205]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Bem vindo"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=244304294]
+layout_mode = 2
+size_flags_vertical = 3
+text = "adsfadfadf"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1573820864]
+layout_mode = 2
+
+[node name="btn_iniciar_cadastro" type="Button" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1229194717]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cadastar-se"
+
+[node name="btn_login" type="Button" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1570661537]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Logar"
+
+[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=220137875]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=799388200]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=869613767]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer2" unique_id=773021715]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1244431678]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Control" type="Control" parent="VBoxContainer2/HBoxContainer" unique_id=1620860418]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="dados_pessoais" type="Panel" parent="VBoxContainer2/HBoxContainer" unique_id=586591761]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais" unique_id=388685534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer" unique_id=1666798720]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1305006279]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Dados pessoais"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=941126085]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1914691686]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nome completo"
+
+[node name="TextEdit_nome" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1884630205]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=551194762]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1506528655]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CPF"
+
+[node name="TextEdit_cpf" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=853190485]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1745060210]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=615953690]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Data de nascimento"
+
+[node name="TextEdit_data_de_nascimento" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1652681131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=729852146]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer" unique_id=1008973068]
+layout_mode = 2
+
+[node name="btn_voltar_b_v" type="Button" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1602605889]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1667109300]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Próximo"
+
+[node name="dados_profissionais" type="Panel" parent="VBoxContainer2/HBoxContainer" unique_id=1048406056]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais" unique_id=1450548143]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer" unique_id=2065585564]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=1421703300]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Dados profissionais"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=1335671294]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1530462144]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CRN"
+
+[node name="TextEdit_crn" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2051821698]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=843853923]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=189529778]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Região do CRN"
+
+[node name="TextEdit_regiao_crn" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1305829262]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=1425335184]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2144898757]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Especialidade"
+
+[node name="TextEdit_especialidade" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=360560995]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=232497975]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=970446397]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Formação"
+
+[node name="TextEdit_formacao" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1378853016]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=407049669]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1556759922]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Instituição de formação"
+
+[node name="TextEdit_instituicao" type="TextEdit" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1091978041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=803274625]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer" unique_id=1563144803]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=557422591]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1791916985]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Próximo"
+
+[node name="endereco" type="Panel" parent="VBoxContainer2/HBoxContainer" unique_id=1624339090]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/endereco" unique_id=1032545810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer" unique_id=750603796]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=322729788]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Endereço profissional"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=869582816]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1925765065]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CEP"
+
+[node name="TextEdit_cep" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer" unique_id=684413145]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=984235405]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1254707101]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rua"
+
+[node name="TextEdit_rua" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=2095493371]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=1909415595]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2078942296]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Número"
+
+[node name="TextEdit_numero" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=328354140]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=1454394002]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1446406044]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Complemento"
+
+[node name="TextEdit_complemento" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1354786605]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=1793882018]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1244953034]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cidade"
+
+[node name="TextEdit_cidade" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=66606959]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=1570346181]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=236250976]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Estado"
+
+[node name="TextEdit_estado" type="TextEdit" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=2086594325]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=2129142378]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer" unique_id=1072667450]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=284135452]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=861899598]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Próximo"
+
+[node name="clinica" type="Panel" parent="VBoxContainer2/HBoxContainer" unique_id=1653153019]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/clinica" unique_id=1128812140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer" unique_id=1818165573]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=1396027532]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Consultório / Clínica"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=1754073230]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer" unique_id=551479429]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nome do consultório"
+
+[node name="TextEdit_nome_clinica" type="TextEdit" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2052388651]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=715241308]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1138773028]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Telefone comercial"
+
+[node name="TextEdit_telefone" type="TextEdit" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1368878888]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=403391321]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1262937940]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Instagram"
+
+[node name="TextEdit_instagram" type="TextEdit" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2087553142]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=1805513093]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=531239329]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Site"
+
+[node name="TextEdit_site" type="TextEdit" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1246094842]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=520395302]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1654263158]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Logo"
+
+[node name="btn_carregar_logo" type="Button" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=781396863]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Carregar imagem"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=976261827]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=106080411]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pré-visualização do logo"
+
+[node name="TextureRect_preview" type="TextureRect" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=674636154]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_811ap")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer" unique_id=2112164384]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1409565621]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_next" type="Button" parent="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=143829183]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Próximo"
+
+[node name="acesso" type="Panel" parent="VBoxContainer2/HBoxContainer" unique_id=1612436641]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer/acesso" unique_id=464031800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer" unique_id=981048714]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=2053692771]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Acesso ao NutriPro"
+horizontal_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=1207977902]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1787143685]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Usuário"
+
+[node name="TextEdit_usuario" type="TextEdit" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1087423352]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=1630586329]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=117866815]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Senha"
+
+[node name="TextEdit_senha" type="TextEdit" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=3468392]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=1888303305]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1840634858]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Confirmar senha"
+
+[node name="TextEdit_senha2" type="TextEdit" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1557978886]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=415197689]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 12
+text = "O uso de senhas não é obrigatório,
+mas é recomendado."
+horizontal_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=1808763888]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=853331297]
+layout_mode = 2
+button_pressed = true
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1447348819]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Ver tutórial no primeiro acesso"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer" unique_id=1762976786]
+layout_mode = 2
+
+[node name="btn_prev" type="Button" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=15947217]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="btn_finalizar_cadastro" type="Button" parent="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1613514338]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Finalizar"
+
+[node name="Control2" type="Control" parent="VBoxContainer2/HBoxContainer" unique_id=400811928]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="VBoxContainer2" unique_id=220192263]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=870697615]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer3" unique_id=1463807486]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer3" unique_id=1225271868]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="VBoxContainer3/HBoxContainer" unique_id=1437644340]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="VBoxContainer3/HBoxContainer" unique_id=156929501]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer3/HBoxContainer/Panel" unique_id=223682141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer" unique_id=544960235]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1900230746]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Login"
+horizontal_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=695372760]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1277230341]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Usuário"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1635948460]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1566097179]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1908016156]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Senha"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1297526394]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1709301961]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=774539234]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=264857529]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Lembrar desse usuário"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=310118252]
+layout_mode = 2
+
+[node name="btn_voltar_b_v" type="Button" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1556069211]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "voltar"
+
+[node name="btn_confirmar_login" type="Button" parent="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=97417198]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lkeka")
+text = "Logar"
+
+[node name="Control2" type="Control" parent="VBoxContainer3/HBoxContainer" unique_id=166063017]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="VBoxContainer3" unique_id=2000121085]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_iniciar_cadastro" to="." method="_on_btn_iniciar_cadastro_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_login" to="." method="_on_btn_login_pressed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_nome" to="." method="_on_text_edit_nome_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_cpf" to="." method="_on_text_edit_cpf_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_data_de_nascimento" to="." method="_on_text_edit_data_de_nascimento_text_changed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2/btn_voltar_b_v" to="." method="_on_btn_voltar_b_v_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/dados_pessoais/MarginContainer/VBoxContainer/HBoxContainer2/btn_next" to="." method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_crn" to="." method="_on_text_edit_crn_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_regiao_crn" to="." method="_on_text_edit_regiao_crn_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_especialidade" to="." method="_on_text_edit_especialidade_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_formacao" to="." method="_on_text_edit_formacao_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_instituicao" to="." method="_on_text_edit_instituicao_text_changed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer2/btn_prev" to="." method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/dados_profissionais/MarginContainer/VBoxContainer/HBoxContainer2/btn_next" to="." method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_cep" to="." method="_on_text_edit_cep_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_rua" to="." method="_on_text_edit_rua_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_numero" to="." method="_on_text_edit_numero_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_complemento" to="." method="_on_text_edit_complemento_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer6/TextEdit_cidade" to="." method="_on_text_edit_cidade_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer7/TextEdit_estado" to="." method="_on_text_edit_estado_text_changed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer2/btn_prev" to="." method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/endereco/MarginContainer/VBoxContainer/HBoxContainer2/btn_next" to="." method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer/TextEdit_nome_clinica" to="." method="_on_text_edit_nome_clinica_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_telefone" to="." method="_on_text_edit_telefone_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_instagram" to="." method="_on_text_edit_instagram_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_site" to="." method="_on_text_edit_site_text_changed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer6/btn_carregar_logo" to="." method="_on_btn_carregar_logo_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer2/btn_prev" to="." method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer2/btn_next" to="." method="_on_btn_next_pressed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_usuario" to="." method="_on_text_edit_usuario_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer3/TextEdit_senha" to="." method="_on_text_edit_senha_text_changed"]
+[connection signal="text_changed" from="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer4/TextEdit_senha2" to="." method="_on_text_edit_senha_2_text_changed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer2/btn_prev" to="." method="_on_btn_prev_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/acesso/MarginContainer/VBoxContainer/HBoxContainer2/btn_finalizar_cadastro" to="." method="_on_btn_finalizar_cadastro_pressed"]
+[connection signal="pressed" from="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_voltar_b_v" to="." method="_on_btn_voltar_b_v_pressed"]
+[connection signal="pressed" from="VBoxContainer3/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_confirmar_login" to="." method="_on_btn_confirmar_login_pressed"]

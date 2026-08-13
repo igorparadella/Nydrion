@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://dt8newgjkablg"]
+
+[node name="Control" type="Control" unique_id=1621868373]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=599948649]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=108633878]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=846113166]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=934481049]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1350088131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1905941986]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel" unique_id=186468046]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer" unique_id=1210440018]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=651532658]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1815704575]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voltar"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=838629728]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Novo paciente"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=519808155]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=27191346]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=980671877]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=493124229]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nome"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=62051402]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=146667376]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1340008654]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Idade"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1657524625]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=171593700]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2119653882]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Data de nascimento"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1946363421]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=667211431]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1534963211]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Telefone"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1350308211]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1434866296]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=422978104]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "E-mail "
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=1417626493]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1347845860]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer8" unique_id=1806389161]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Profissão"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer8" unique_id=1856714067]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1575522699]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer9" unique_id=785174207]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Objetivo"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer9" unique_id=1496676604]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=57868118]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=302591423]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Estado civil"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer10" unique_id=500741911]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer11" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1248149552]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer11" unique_id=1205359398]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Filhos"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer11" unique_id=90546836]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=291141960]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1610249627]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer12" unique_id=1947318470]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Adicionar campo"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer12" unique_id=1888768075]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Salvar"
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=524875292]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=73966918]
+layout_mode = 2
+size_flags_vertical = 3
