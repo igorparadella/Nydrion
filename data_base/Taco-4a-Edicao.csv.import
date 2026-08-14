@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cgprtlnt1dtap"
+
+[deps]
+
+files=["res://data_base/Taco-4a-Edicao.Carbo.translation", "res://data_base/Taco-4a-Edicao.Fibra.translation", "res://data_base/Taco-4a-Edicao.Vitamina.translation"]
+
+source_file="res://data_base/Taco-4a-Edicao.csv"
+dest_files=["res://data_base/Taco-4a-Edicao.Carbo.translation", "res://data_base/Taco-4a-Edicao.Fibra.translation", "res://data_base/Taco-4a-Edicao.Vitamina.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bl2djecfhc7o4"]
 
-[ext_resource type="Script" uid="uid://cp7m2jd648mk4" path="res://scripts/main.gd" id="1_4fhxt"]
+[ext_resource type="Script" uid="uid://cp7m2jd648mk4" path="res://scripts/outros/main.gd" id="1_4fhxt"]
 [ext_resource type="Texture2D" uid="uid://2yauacvdfmsd" path="res://texturas/logo.png" id="1_mtgg2"]
-[ext_resource type="Script" uid="uid://d00qt4q0lfadv" path="res://scripts/checar_atualizacao.gd" id="4_b30p5"]
+[ext_resource type="Script" uid="uid://d00qt4q0lfadv" path="res://scripts/outros/checar_atualizacao.gd" id="4_b30p5"]
 
 [sub_resource type="Gradient" id="Gradient_vabh6"]
 offsets = PackedFloat32Array(1)

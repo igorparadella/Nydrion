@@ -12,9 +12,6 @@ func _ready() -> void:
 	criacao_de_item.visible = false
 	atualizar()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func abrir(data):

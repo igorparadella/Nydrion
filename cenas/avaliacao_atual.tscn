@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgtbyycc8p27j"]
 
-[ext_resource type="Script" uid="uid://dtyxug8ubsvom" path="res://scripts/avaliacao_atual.gd" id="1_elbto"]
+[ext_resource type="Script" uid="uid://dtyxug8ubsvom" path="res://scripts/paciente/avaliacao_atual.gd" id="1_elbto"]
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_tl5d3"]
 [ext_resource type="PackedScene" uid="uid://c253isbiaji2x" path="res://prefab/paciente/item_status.res" id="2_4cjen"]
 [ext_resource type="PackedScene" uid="uid://5ff7y2h0ye2t" path="res://prefab/selecao_de_item.tscn" id="4_4cjen"]

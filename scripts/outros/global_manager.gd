@@ -1,7 +1,6 @@
 extends Node
 
 
-var data_taco: TacoAlimento
 
 var checar_atualizacao := false
 const USAR_CRIPTOGRAFIA = false
@@ -25,31 +24,14 @@ var cores := {
 
 
 func _ready() -> void:
-
-	# ========================================================
-	# TACO
-	# ========================================================
-
-	data_taco = TacoAlimento.new()
-
-	if data_taco.alimentos.is_empty():
-		printerr("TACO não foi carregada.")
-
-		return
-
-	#print(
-		#"TACO pronta. ",
-		#data_taco.alimentos.size(),
-		#" alimentos disponíveis."
-	#)
-
+	pass
 
 func salvar_paciente_aberto():
-	if paciente_aberto.has("paciente_aberto") and paciente_aberto["dados_pessoais"].has("nome"):
-		var nome = paciente_aberto['dados_pessoais']["nome"]
-		var c = str(caminho,nome,".json")
+	if paciente_aberto.has("dados_pessoais") and paciente_aberto["dados_pessoais"].has("nome"):
+		var arquivo = paciente_aberto["arquivo"]
+		var c = str(caminho,arquivo)
 		salvar(paciente_aberto, c)
-
+		
 func salvar(data, caminho_save):
 	var s : Save_manager = Save_manager.new()
 	s.data = data

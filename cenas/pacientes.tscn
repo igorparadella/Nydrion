@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckiif4essw1ai"]
 
-[ext_resource type="Script" uid="uid://daw00cs0gg4rw" path="res://scripts/pacientes.gd" id="1_gy6hu"]
+[ext_resource type="Script" uid="uid://daw00cs0gg4rw" path="res://scripts/outros/pacientes.gd" id="1_gy6hu"]
 [ext_resource type="PackedScene" uid="uid://bdae33t3fxt0d" path="res://prefab/pacientes/paciente.res" id="1_uow6t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1raa"]

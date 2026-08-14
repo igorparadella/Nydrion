@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5ff7y2h0ye2t"]
 
-[ext_resource type="Script" uid="uid://ri7thfgb24jq" path="res://scripts/selecao_de_item.gd" id="1_dovqa"]
+[ext_resource type="Script" uid="uid://ri7thfgb24jq" path="res://scripts/outros/selecao_de_item.gd" id="1_dovqa"]
 [ext_resource type="PackedScene" uid="uid://bhxy7yvy6ibsu" path="res://prefab/grafico_linha.res" id="2_ubywv"]
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="3_qo2ry"]
 

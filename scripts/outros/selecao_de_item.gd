@@ -77,7 +77,7 @@ func _on_btn_salvar_novo_dado_pressed() -> void:
 	
 	for i in GlobalManager.paciente_aberto['avalicao']:
 		for a in GlobalManager.paciente_aberto['avalicao'][i]:
-			print(str(GlobalManager.paciente_aberto['avalicao'][i][a]," ==== ",data["titulo"]))
+			#print(str(GlobalManager.paciente_aberto['avalicao'][i][a]," ==== ",data["titulo"]))
 			if str(GlobalManager.paciente_aberto['avalicao'][i][a]) == str(data["titulo"]):
 				
 				if GlobalManager.paciente_aberto['avalicao'][i].has("valor_atual"):

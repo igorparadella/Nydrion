@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://byxln54yo5uk3"]
 
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_7qvr5"]
-[ext_resource type="Script" uid="uid://dgrkbanok1off" path="res://scripts/anamnese.gd" id="1_iwnkf"]
-[ext_resource type="Script" uid="uid://dthw6ykk8g1s0" path="res://scripts/manual.gd" id="2_obhn4"]
-[ext_resource type="Script" uid="uid://cij6emyghysp8" path="res://scripts/doc.gd" id="3_n730p"]
+[ext_resource type="Script" uid="uid://dgrkbanok1off" path="res://scripts/paciente/anamnese.gd" id="1_iwnkf"]
+[ext_resource type="Script" uid="uid://dthw6ykk8g1s0" path="res://scripts/outros/manual.gd" id="2_obhn4"]
+[ext_resource type="Script" uid="uid://cij6emyghysp8" path="res://scripts/outros/doc.gd" id="3_n730p"]
 
 [node name="Control" type="Control" unique_id=1729133135]
 layout_mode = 3

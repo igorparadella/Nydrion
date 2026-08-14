@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b6d4pcb5wdx8k"]
 
-[ext_resource type="Script" uid="uid://v4kjygfnd3q3" path="res://scripts/paciente.gd" id="1_kguft"]
+[ext_resource type="Script" uid="uid://v4kjygfnd3q3" path="res://scripts/paciente/paciente.gd" id="1_kguft"]
 [ext_resource type="PackedScene" uid="uid://c253isbiaji2x" path="res://prefab/paciente/item_status.res" id="2_dokwl"]
-[ext_resource type="Script" uid="uid://odtkjiehcb3x" path="res://scripts/avaliacao_atual_na_visao_geral.gd" id="2_xkunw"]
-[ext_resource type="Script" uid="uid://c43bvepdc6mxb" path="res://scripts/ver_anamnese.gd" id="4_2xt2k"]
+[ext_resource type="Script" uid="uid://odtkjiehcb3x" path="res://scripts/paciente/avaliacao_atual_na_visao_geral.gd" id="2_xkunw"]
+[ext_resource type="Script" uid="uid://c43bvepdc6mxb" path="res://scripts/paciente/ver_anamnese.gd" id="4_2xt2k"]
 [ext_resource type="PackedScene" uid="uid://dyg2bmf3f1imy" path="res://prefab/paciente/proxima_consulta.res" id="4_gsoda"]
 [ext_resource type="PackedScene" uid="uid://5ff7y2h0ye2t" path="res://prefab/selecao_de_item.tscn" id="6_gsoda"]
 [ext_resource type="PackedScene" uid="uid://b2pjrgw50ag45" path="res://cenas/agenda.tscn" id="7_mmvfd"]

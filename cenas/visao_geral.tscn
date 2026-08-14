@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://14sbgo2fey7t"]
 
-[ext_resource type="Script" uid="uid://bg5e0ppxpnbjg" path="res://scripts/visao_geral.gd" id="1_awqr7"]
+[ext_resource type="Script" uid="uid://bg5e0ppxpnbjg" path="res://scripts/paciente/visao_geral.gd" id="1_awqr7"]
 
 [node name="Control" type="Control" unique_id=264270160]
 layout_mode = 3

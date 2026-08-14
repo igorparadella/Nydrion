@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crho84vwstcn5"]
 
-[ext_resource type="Script" uid="uid://d32ql4tuoc73e" path="res://scripts/numerico.gd" id="1_dists"]
+[ext_resource type="Script" uid="uid://d32ql4tuoc73e" path="res://scripts/outros/numerico.gd" id="1_dists"]
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_gqjvo"]
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=1614296836]

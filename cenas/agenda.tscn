@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2pjrgw50ag45"]
 
-[ext_resource type="Script" uid="uid://dvl8ho4xjh45j" path="res://scripts/agenda_controlador.gd" id="1_i1f54"]
+[ext_resource type="Script" uid="uid://dvl8ho4xjh45j" path="res://scripts/agenda/agenda_controlador.gd" id="1_i1f54"]
 [ext_resource type="PackedScene" uid="uid://d5c75g440u2a" path="res://prefab/agenda/dia.res" id="3_l2hvr"]
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="5_l2hvr"]
 
