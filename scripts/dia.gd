@@ -50,16 +50,18 @@ func _ready() -> void:
 	# Aplica ao Panel
 	add_theme_stylebox_override("panel", estilo)
 	
-	#if not GlobalManager.config["agenda"].is_empty():
-		#for i in GlobalManager.config["agenda"]:
-			#if GlobalManager.config["agenda"][i]["consulta"] == str(dia,"_",mes,"_",ano):
-				#panel.visible = true
-	
+				
+				
+	var d = str(dia,"/",mes,"/",ano)
+	for i in GlobalManager.config['agenda']:
+		#print(GlobalManager.config['agenda'])
+		if GlobalManager.config['agenda'][i]["consulta"]["dia"] == d:
+			panel.visible = true
 
 func _on_button_pressed() -> void:
-	GlobalManager.atalhos["paciente_tela"].agenda2.click(self)
+	GlobalManager.atalhos["agenda"].click(self)
 
 
 func _on_button_mouse_entered() -> void:
-	GlobalManager.atalhos["paciente_tela"].agenda2.hover(self)
-	pass # Replace with function body.
+	GlobalManager.atalhos["agenda"].hover(self)
+	

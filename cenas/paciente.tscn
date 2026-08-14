@@ -1698,7 +1698,7 @@ size_flags_vertical = 3
 [node name="MarginContainer" parent="agenda/HBoxContainer/VBoxContainer" unique_id=1623282771 instance=ExtResource("7_mmvfd")]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
+size_flags_stretch_ratio = 8.0
 
 [node name="Control2" type="Control" parent="agenda/HBoxContainer/VBoxContainer" unique_id=1487092736]
 layout_mode = 2

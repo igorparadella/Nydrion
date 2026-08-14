@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b2pjrgw50ag45"]
 
 [ext_resource type="Script" uid="uid://dvl8ho4xjh45j" path="res://scripts/agenda_controlador.gd" id="1_i1f54"]
-[ext_resource type="PackedScene" uid="uid://bt6dxmfutfyh7" path="res://prefab/agenda/consulta.res" id="3_i1f54"]
 [ext_resource type="PackedScene" uid="uid://d5c75g440u2a" path="res://prefab/agenda/dia.res" id="3_l2hvr"]
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="5_l2hvr"]
 
@@ -181,21 +180,14 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=70608616]
 layout_mode = 2
 
-[node name="lista_consultas" type="VBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1875876765]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=471242257]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Panel" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/lista_consultas" unique_id=1306419018 instance=ExtResource("3_i1f54")]
+[node name="lista_consultas" type="VBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1875876765]
 layout_mode = 2
-
-[node name="Panel2" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/lista_consultas" unique_id=1720142312 instance=ExtResource("3_i1f54")]
-layout_mode = 2
-
-[node name="Panel3" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/lista_consultas" unique_id=1989151121 instance=ExtResource("3_i1f54")]
-layout_mode = 2
-
-[node name="Panel4" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/lista_consultas" unique_id=1498673041 instance=ExtResource("3_i1f54")]
-layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="n_msg" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=732576263]
 visible = false

@@ -10,7 +10,7 @@ var paciente = false
 
 func _ready() -> void:
 	$Panel.visible = false
-	
+	GlobalManager.atalhos["agenda"] = self
 	var data_atual = Time.get_datetime_dict_from_system()
 
 	mes_atual = data_atual["month"]
@@ -180,12 +180,35 @@ func click(quem):
 		var v = str(quem.dia,"/",quem.mes,"/",quem.ano)
 		$Panel/Panel/MarginContainer/VBoxContainer/VBoxContainer/Label2.text = v
 	
-	
-	
+	else:
+		consultar_agenda(quem)
 	
 	pass
 
 func hover(quem):
+	if paciente == true:
+		consultar_agenda(quem)
+	
+	pass
+@onready var lista_consultas: VBoxContainer = $HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/lista_consultas
+
+func consultar_agenda(quem):
+	var d = str(quem.dia,"/",quem.mes,"/",quem.ano)
+	
+	for i in lista_consultas.get_children():
+		i.queue_free()
+	
+	for i in GlobalManager.config['agenda']:
+		if GlobalManager.config['agenda'][i]["consulta"]["dia"] == d:
+			var aq = "res://prefab/agenda/consulta.res"
+			var v = {
+				'dia' : d,
+				'paciente' : i,
+			}
+			GlobalManager.adicionar_cena_como_filho(aq,lista_consultas,v)
+		
+	
+	
 	pass
 
 

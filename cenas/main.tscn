@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cp7m2jd648mk4" path="res://scripts/main.gd" id="1_4fhxt"]
 [ext_resource type="Texture2D" uid="uid://2yauacvdfmsd" path="res://texturas/logo.png" id="1_mtgg2"]
-[ext_resource type="PackedScene" uid="uid://b2pjrgw50ag45" path="res://cenas/agenda.tscn" id="2_t4ukd"]
 [ext_resource type="Script" uid="uid://d00qt4q0lfadv" path="res://scripts/checar_atualizacao.gd" id="4_b30p5"]
 
 [sub_resource type="Gradient" id="Gradient_vabh6"]
@@ -119,9 +118,6 @@ theme_override_constants/separation = 0
 [node name="Control" type="Control" parent="HBoxContainer" unique_id=1128339598]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="MarginContainer" parent="HBoxContainer/Control" unique_id=1846323344 instance=ExtResource("2_t4ukd")]
-layout_mode = 1
 
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_visao_geral" to="." method="_on_btn_visao_geral_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_pacientes" to="." method="_on_btn_pacientes_pressed"]

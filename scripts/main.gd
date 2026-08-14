@@ -37,7 +37,7 @@ func _ready() -> void:
 
 
 func data_valida(data_a: String) -> bool:
-	var partes = data_a.split("_")
+	var partes = data_a.replace("/", "_").split("_")
 	
 	if partes.size() != 3:
 		return false

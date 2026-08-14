@@ -33,7 +33,7 @@ var info
 func _ready() -> void:
 	info = GlobalManager.paciente_aberto
 	GlobalManager.atalhos["paciente_tela"] = self
-	
+	agenda.visible = false
 	panel.info = info
 	panel.atualizar()
 	
