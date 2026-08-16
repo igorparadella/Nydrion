@@ -46,3 +46,7 @@ func adicionar_receita(id,info):
 
 func _on_btn_voltar_pressed() -> void:
 	GlobalManager.atalhos["main"].abrir_tela("paciente")
+
+
+func _on_btn_editar_medidor_pressed() -> void:
+	$editar_medidores.visible = true

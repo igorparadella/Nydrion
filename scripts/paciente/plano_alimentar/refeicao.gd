@@ -77,8 +77,10 @@ func _on_btn_adicionar_alimento_pressed() -> void:
 
 
 func _on_option_button_dia_item_selected(index: int) -> void:
-	GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"][str(id)]["dia"] = index
-	GlobalManager.salvar_paciente_aberto()
+	print("-------------------------------------------")
+	#print(GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"][str(id)])
+	GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"][str(id)]["dia"] = str(index)
+	#GlobalManager.salvar_paciente_aberto()
 
 func _on_text_edit_horario_text_changed() -> void:
 	GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"][str(id)]["horario"] = $MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2/TextEdit_horario.text

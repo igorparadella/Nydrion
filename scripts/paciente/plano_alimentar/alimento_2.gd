@@ -18,7 +18,6 @@ func _ready() -> void:
 	nome.text = data['alimento_data']["nome"]
 	gramas.text = str(data['gramas'])
 	valor_gramas = float(data['gramas'])
-	
 
 
 func _on_texture_button_pressed() -> void:

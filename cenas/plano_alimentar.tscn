@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://bgc2i372736cy" path="res://scripts/paciente/plano_alimentar/plano_alimentar.gd" id="1_tm8r0"]
 [ext_resource type="PackedScene" uid="uid://cmr4g3vemery8" path="res://prefab/plano_alimentar/refeicao.res" id="2_k4qpn"]
 [ext_resource type="Script" uid="uid://djeo0k72hsgc3" path="res://scripts/paciente/plano_alimentar/panel_novo_alimento.gd" id="4_k4qpn"]
+[ext_resource type="PackedScene" uid="uid://bkun8j4scvo6m" path="res://prefab/plano_alimentar/medidor.res" id="4_ng1ql"]
 [ext_resource type="Script" uid="uid://cqga47rxm8g8t" path="res://scripts/paciente/plano_alimentar/panel_2_descricao_alimento.gd" id="5_xo78a"]
+[ext_resource type="Script" uid="uid://c7ncidxcy4y5s" path="res://scripts/paciente/plano_alimentar/editar_medidores.gd" id="6_1iu5i"]
+[ext_resource type="PackedScene" uid="uid://cujw56c3dmypw" path="res://prefab/plano_alimentar/editar_limite_medidor.res" id="7_yv6ku"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7ugd"]
 bg_color = Color(0.4210918, 0.4210918, 0.42109165, 0.46666667)
@@ -13,6 +16,9 @@ bg_color = Color(0.4210918, 0.4210918, 0.42109165, 0.46666667)
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eehox"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5176471)
 
 [node name="Control" type="Control" unique_id=1361814560]
 layout_mode = 3
@@ -122,7 +128,7 @@ text = "Salvar"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1849211185]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.4
+size_flags_stretch_ratio = 0.5
 theme_override_constants/separation = 10
 
 [node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=443539435]
@@ -153,6 +159,7 @@ text = "Medidores"
 horizontal_alignment = 1
 
 [node name="medidor" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=2106839925]
+visible = false
 layout_mode = 2
 
 [node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor" unique_id=449548863]
@@ -191,6 +198,7 @@ text = "16.4k/g"
 horizontal_alignment = 1
 
 [node name="medidor2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1651046275]
+visible = false
 layout_mode = 2
 
 [node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor2" unique_id=1342210187]
@@ -229,6 +237,7 @@ text = "16.4k/g"
 horizontal_alignment = 1
 
 [node name="medidor3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=950910034]
+visible = false
 layout_mode = 2
 
 [node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor3" unique_id=1132472914]
@@ -267,6 +276,7 @@ text = "16.4k/g"
 horizontal_alignment = 1
 
 [node name="medidor4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=898515839]
+visible = false
 layout_mode = 2
 
 [node name="nome" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/medidor4" unique_id=991799067]
@@ -304,7 +314,32 @@ size_flags_horizontal = 3
 text = "16.4k/g"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=619907327]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer" unique_id=810217251]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="medidores_atalho" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/ScrollContainer" unique_id=807254991]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/ScrollContainer/medidores_atalho" unique_id=755428968 instance=ExtResource("4_ng1ql")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel2" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/ScrollContainer/medidores_atalho" unique_id=58979512 instance=ExtResource("4_ng1ql")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel3" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/ScrollContainer/medidores_atalho" unique_id=1707793950 instance=ExtResource("4_ng1ql")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel4" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/VBoxContainer/ScrollContainer/medidores_atalho" unique_id=730936904 instance=ExtResource("4_ng1ql")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="btn_editar_medidor" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=619907327]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Editar medidores"
@@ -514,8 +549,87 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="editar_medidores" type="Panel" parent="." unique_id=1494551801]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eehox")
+script = ExtResource("6_1iu5i")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="editar_medidores" unique_id=2042858253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="editar_medidores/HBoxContainer" unique_id=1939322151]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="editar_medidores/HBoxContainer" unique_id=1782671725]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="editar_medidores/HBoxContainer/VBoxContainer" unique_id=1872134279]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="editar_medidores/HBoxContainer/VBoxContainer" unique_id=986924904]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel" unique_id=750576572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer" unique_id=1220238781]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1256813142]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Medidores"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=936816994]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="medidores" type="VBoxContainer" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2070497189]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/medidores" unique_id=1311382923 instance=ExtResource("7_yv6ku")]
+layout_mode = 2
+
+[node name="btn_fechar" type="Button" parent="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=2072219966]
+layout_mode = 2
+text = "Fechar"
+
+[node name="Control2" type="Control" parent="editar_medidores/HBoxContainer/VBoxContainer" unique_id=36073848]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="editar_medidores/HBoxContainer" unique_id=686026375]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_voltar" to="." method="_on_btn_voltar_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_abrir_nova_refeicao" to="." method="_on_btn_abrir_nova_refeicao_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/btn_editar_medidor" to="." method="_on_btn_editar_medidor_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_fechar" to="Panel_novo_alimento" method="_on_btn_fechar_pressed"]
 [connection signal="text_changed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit" to="Panel_novo_alimento" method="_on_text_edit_text_changed"]
 [connection signal="item_selected" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/pesquisar_grupo" to="Panel_novo_alimento" method="_on_pesquisar_grupo_item_selected"]
@@ -523,3 +637,4 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/btn_mais" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_mais_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/btn_menos" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_menos_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/btn_adicionar" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_adicionar_pressed"]
+[connection signal="pressed" from="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/btn_fechar" to="editar_medidores" method="_on_btn_fechar_pressed"]
