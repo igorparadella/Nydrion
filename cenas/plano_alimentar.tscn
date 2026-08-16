@@ -3,6 +3,8 @@
 [ext_resource type="Theme" uid="uid://c8fmnl5p0o7g4" path="res://theme/botao_cheio.tres" id="1_n4cp6"]
 [ext_resource type="Script" uid="uid://bgc2i372736cy" path="res://scripts/paciente/plano_alimentar/plano_alimentar.gd" id="1_tm8r0"]
 [ext_resource type="PackedScene" uid="uid://cmr4g3vemery8" path="res://prefab/plano_alimentar/refeicao.res" id="2_k4qpn"]
+[ext_resource type="Script" uid="uid://djeo0k72hsgc3" path="res://scripts/paciente/plano_alimentar/panel_novo_alimento.gd" id="4_k4qpn"]
+[ext_resource type="Script" uid="uid://cqga47rxm8g8t" path="res://scripts/paciente/plano_alimentar/panel_2_descricao_alimento.gd" id="5_xo78a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7ugd"]
 bg_color = Color(0.4210918, 0.4210918, 0.42109165, 0.46666667)
@@ -81,6 +83,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+offset_transform_position = Vector2(-5, 0)
 
 [node name="Panel" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer/lista_refeicoes" unique_id=805456233 instance=ExtResource("2_k4qpn")]
 layout_mode = 2
@@ -119,7 +122,7 @@ text = "Salvar"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1849211185]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.4
 theme_override_constants/separation = 10
 
 [node name="Panel3" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=443539435]
@@ -315,6 +318,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v7ugd")
+script = ExtResource("4_k4qpn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel_novo_alimento" unique_id=712891775]
 layout_mode = 1
@@ -419,6 +423,7 @@ size_flags_vertical = 3
 [node name="Panel2_descricao_alimento" type="Panel" parent="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=688638688]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("5_xo78a")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" unique_id=1636620777]
 layout_mode = 1
@@ -472,7 +477,7 @@ layout_mode = 2
 text = "   "
 horizontal_alignment = 1
 
-[node name="TextEdit" type="TextEdit" parent="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=205272414]
+[node name="gramas" type="TextEdit" parent="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=205272414]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100"
@@ -514,7 +519,7 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_fechar" to="Panel_novo_alimento" method="_on_btn_fechar_pressed"]
 [connection signal="text_changed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit" to="Panel_novo_alimento" method="_on_text_edit_text_changed"]
 [connection signal="item_selected" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/pesquisar_grupo" to="Panel_novo_alimento" method="_on_pesquisar_grupo_item_selected"]
-[connection signal="text_changed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/TextEdit" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_text_edit_text_changed"]
+[connection signal="text_changed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/gramas" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_gramas_text_changed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/btn_mais" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_mais_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/btn_menos" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_menos_pressed"]
-[connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/btn_adicionar" to="Panel_novo_alimento" method="_on_btn_adicionar_pressed"]
+[connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/btn_adicionar" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_adicionar_pressed"]

@@ -7,6 +7,13 @@ var paciente
 func _ready() -> void:
 	var horario = GlobalManager.config["agenda"][paciente]["consulta"]["horario"]
 	var i = GlobalManager.carregar(str(GlobalManager.caminho,paciente,".json"))
+	if i.is_empty():
+		GlobalManager.config["agenda"].erase(paciente)
+		GlobalManager.salvar_config()
+		GlobalManager.atalhos["agenda"].atualizar_calendario()
+		queue_free()
+		return
+	
 	var nome = str(i["dados_pessoais"]["nome"])
 	
 	label.text = str(horario, " - ", nome)
@@ -16,5 +23,7 @@ func _ready() -> void:
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	GlobalManager.config["agenda"].erase(paciente)
+	GlobalManager.atalhos["agenda"].atualizar_calendario()
+	GlobalManager.salvar_config()
 	queue_free()
 	pass # Replace with function body.

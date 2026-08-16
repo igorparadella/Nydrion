@@ -29,6 +29,7 @@ func _ready() -> void:
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
 	$VBoxContainer3.visible = false
+	GlobalManager.atalhos["notificar"] = self
 	
 	
 	var a = carregar_atalho()
@@ -83,12 +84,14 @@ func _on_btn_finalizar_cadastro_pressed() -> void:
 	etapa = 0
 	#print(info)
 	
-	if info["senha"] != info["senha"]:
-		printerr("erro na senha")
+	if info["senha"] != info["senha2"]:
+		#printerr("erro na senha")
+		GlobalManager.notificar("Erro","As senhas não correspondem")
+		
 		return
 	
 	if info["usuario"] == null or info["usuario"] == null:
-		printerr("erro no nome de usuario")
+		GlobalManager.notificar("Erro","É necessário um nome de usuário")
 		return
 	
 	await salvar_usuario(info)
@@ -311,6 +314,7 @@ func _on_btn_confirmar_login_pressed() -> void:
 		
 		get_tree().change_scene_to_file("res://cenas/main.tscn")
 	else:
+		GlobalManager.notificar("Erro","O usuário ou senha estão incorretos")
 		printerr("Usuário ou senha incorretos.")
 	
 	

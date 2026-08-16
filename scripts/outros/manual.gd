@@ -72,7 +72,9 @@ func _on_btn_confirmar_pressed() -> void:
 		GlobalManager.paciente_aberto = GlobalManager.carregar(str(GlobalManager.caminho,aq))
 		
 		GlobalManager.abrir_tela("paciente")
-		
+	else:
+		GlobalManager.notificar("Erro","É necessário um nome para o paciente")
+
 
 
 func _on_text_edit_nome_text_changed() -> void:

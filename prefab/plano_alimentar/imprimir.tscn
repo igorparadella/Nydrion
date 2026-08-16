@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://becbrliybl5wn"]
+
+[ext_resource type="Script" uid="uid://dbb2xoarw8xtt" path="res://scripts/paciente/plano_alimentar/imprimir.gd" id="1_l04pn"]
+
+[node name="Control" type="Control" unique_id=351466267]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l04pn")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1162794845]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1505211446]
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1604210990]
+custom_minimum_size = Vector2(2480, 3508)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -68.0
+offset_right = 1648.0
+offset_bottom = 2928.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control" unique_id=88828559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="SubViewportContainer/SubViewport/Control/Panel" unique_id=1927837411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "extends Control
+
+@onready var sub_viewport: SubViewport = $SubViewportContainer/SubViewport
+@onready var folha: Control = $SubViewportContainer/SubViewport/Control
+
+
+func _ready() -> void:
+	# Tamanho da imagem final da folha
+	var tamanho_folha := Vector2i(2480, 3508)
+
+	# O SubViewport terá o tamanho COMPLETO da folha
+	sub_viewport.size = tamanho_folha
+
+	sub_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+
+	# A folha também ocupa o viewport inteiro
+	folha.position = Vector2.ZERO
+	folha.size = Vector2(tamanho_folha)
+
+
+func salvar_folha() -> void:
+	# Garante que o viewport tenha o tamanho completo
+	sub_viewport.size = Vector2i(2480, 3508)
+
+	folha.position = Vector2.ZERO
+	folha.size = Vector2(2480, 3508)
+
+	# Dá tempo para o Control ser renderizado
+	await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+
+	var imagem := sub_viewport.get_texture().get_image()
+
+	if imagem == null:
+		print(\"Não conseguiu capturar a folha.\")
+		return
+
+	var caminho := \"user://folha.png\"
+
+	var erro := imagem.save_png(caminho)
+
+	if erro == OK:
+		print(\"Imagem salva!\")
+		print(\"Tamanho: \", imagem.get_size())
+		print(\"Local: \", caminho)
+	else:
+		print(\"Erro ao salvar: \", erro)"

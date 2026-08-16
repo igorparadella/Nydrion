@@ -21,6 +21,8 @@ var tela_atual = null
 
 func _ready() -> void:
 	GlobalManager.atalhos["main"] = self
+	GlobalManager.atalhos["notificar"] = $HBoxContainer/Control
+
 	GlobalManager.caminho = str("user://usuarios/",GlobalManager.info["usuario"],"/")
 	GlobalManager.config = GlobalManager.carregar(str(GlobalManager.caminho,"config.json"))
 	if GlobalManager.config == {} or GlobalManager.config.is_empty():

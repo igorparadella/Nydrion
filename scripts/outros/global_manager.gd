@@ -90,10 +90,10 @@ func abrir_tela(nome: String):
 	atalhos["main"].abrir_tela(nome)
 
 func adicionar_cena_como_filho(
-	caminho_cena: String,
-	pai: Node,
-	variaveis: Dictionary = {}
-) -> Node:
+		caminho_cena: String,
+		pai: Node,
+		variaveis: Dictionary = {}
+	) -> Node:
 	if pai == null:
 		push_error("O nó pai não foi informado.")
 		return null
@@ -189,3 +189,11 @@ func criar_config():
 
 func salvar_config():
 	salvar(config,str(caminho,"config.json"))
+
+func notificar(titulo : String, msg : String):
+	var i = {
+		"titulo" : titulo,
+		"msg" : msg,
+	}
+	
+	adicionar_cena_como_filho("res://prefab/interface/popup.res", atalhos["notificar"], i)

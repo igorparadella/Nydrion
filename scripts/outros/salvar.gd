@@ -71,7 +71,7 @@ func salvar_data() -> void:
 	arquivo.store_string(texto)
 	arquivo.close()
 
-	print("Data salva com sucesso!")
+	#print("Data salva com sucesso!")
 
 
 # ============================================================

@@ -15,17 +15,23 @@ func atualizar():
 		i.queue_free()
 	
 	
-	
+	var remover = []
 	if not pacientes.is_empty():
 		GlobalManager.pacientes = pacientes
-		#print("pacientes ",pacientes)
 		for i in GlobalManager.pacientes:
 			var info = {}
 			info['info'] = GlobalManager.carregar(str(GlobalManager.caminho,GlobalManager.pacientes[i]))
-			
+			if info['info'].is_empty():
+				remover.append(i)
+				continue
 			GlobalManager.adicionar_cena_como_filho("res://prefab/pacientes/paciente.res",lista_pacientes,info)
 
-
+		if not remover.is_empty():
+			for i in remover:
+				GlobalManager.pacientes.erase(i)
+			
+			GlobalManager.salvar(GlobalManager.pacientes,str(GlobalManager.caminho,"pacientes.json"))
+	
 
 
 func _on_btn_novo_paciente_pressed() -> void:
