@@ -1,6 +1,27 @@
 [gd_scene format=3 uid="uid://becbrliybl5wn"]
 
 [ext_resource type="Script" uid="uid://dbb2xoarw8xtt" path="res://scripts/paciente/plano_alimentar/imprimir.gd" id="1_l04pn"]
+[ext_resource type="Texture2D" uid="uid://dydptqxmpitdy" path="res://texturas/icon.png" id="2_suxq8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7ugd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx4lu"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 0.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65d1j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44705883, 0.72156864, 0.4745098, 1)
+
+[sub_resource type="Theme" id="Theme_m8of3"]
+Panel/styles/panel = SubResource("StyleBoxFlat_65d1j")
 
 [node name="Control" type="Control" unique_id=351466267]
 layout_mode = 3
@@ -17,6 +38,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1505211446]
+handle_input_locally = false
+render_target_update_mode = 4
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1604210990]
 custom_minimum_size = Vector2(2480, 3508)
@@ -24,14 +47,23 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -320.0
-offset_top = -68.0
-offset_right = 1648.0
-offset_bottom = 2928.0
+offset_left = -984.0
+offset_top = -1498.0
+offset_right = 984.0
+offset_bottom = 1498.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control" unique_id=88828559]
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control" unique_id=1925743278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v7ugd")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel" unique_id=446664841]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,57 +71,366 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextEdit" type="TextEdit" parent="SubViewportContainer/SubViewport/Control/Panel" unique_id=1927837411]
+[node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer" unique_id=172429497]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qx4lu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer" unique_id=1024824866]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=290513933]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1021320329]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_suxq8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=931740709]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=156925044]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1983963303]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "PLANO ALIMENTAR"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1770530379]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Plano nutricional individualizado"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1617535945]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=854327896]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=2081293402]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel" unique_id=917439340]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "extends Control
 
-@onready var sub_viewport: SubViewport = $SubViewportContainer/SubViewport
-@onready var folha: Control = $SubViewportContainer/SubViewport/Control
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer" unique_id=460211548]
+layout_mode = 2
 
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=454800358]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "PACIENTE"
 
-func _ready() -> void:
-	# Tamanho da imagem final da folha
-	var tamanho_folha := Vector2i(2480, 3508)
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=124619522]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "João da Silva "
 
-	# O SubViewport terá o tamanho COMPLETO da folha
-	sub_viewport.size = tamanho_folha
+[node name="Panel2" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=208894076]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
 
-	sub_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2" unique_id=1251924771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-	# A folha também ocupa o viewport inteiro
-	folha.position = Vector2.ZERO
-	folha.size = Vector2(tamanho_folha)
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer" unique_id=933105622]
+layout_mode = 2
 
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=796629660]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "DATA"
 
-func salvar_folha() -> void:
-	# Garante que o viewport tenha o tamanho completo
-	sub_viewport.size = Vector2i(2480, 3508)
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=804680796]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "17/08/2026 "
 
-	folha.position = Vector2.ZERO
-	folha.size = Vector2(2480, 3508)
+[node name="Panel3" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=1068092194]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
 
-	# Dá tempo para o Control ser renderizado
-	await get_tree().process_frame
-	await RenderingServer.frame_post_draw
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3" unique_id=1737377849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-	var imagem := sub_viewport.get_texture().get_image()
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer" unique_id=1474964130]
+layout_mode = 2
 
-	if imagem == null:
-		print(\"Não conseguiu capturar a folha.\")
-		return
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer/VBoxContainer" unique_id=362729164]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "OBJETIVO"
 
-	var caminho := \"user://folha.png\"
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer/VBoxContainer" unique_id=82122580]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Manutenção"
 
-	var erro := imagem.save_png(caminho)
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2091211817]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
 
-	if erro == OK:
-		print(\"Imagem salva!\")
-		print(\"Tamanho: \", imagem.get_size())
-		print(\"Local: \", caminho)
-	else:
-		print(\"Erro ao salvar: \", erro)"
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel" unique_id=2137840022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer" unique_id=966645125]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=447331718]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Orientação: "
+
+[node name="LineEdit" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=571069252]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Distribuir as refeições ao longo do dia e manter boa hidratação. "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2023358504]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1081566413]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1685408690]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=1915586212]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel" unique_id=980042384]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel/MarginContainer" unique_id=1728588743]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel/MarginContainer/VBoxContainer" unique_id=1409770263]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "ENERGIA"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel/MarginContainer/VBoxContainer" unique_id=1852765890]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "2.100 kcal"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=461233449]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2" unique_id=184327380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2/MarginContainer" unique_id=1742108255]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2/MarginContainer/VBoxContainer" unique_id=484041688]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "PROTEÍNAS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2/MarginContainer/VBoxContainer" unique_id=1203035131]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "120 g"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=1646274234]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3" unique_id=227707400]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3/MarginContainer" unique_id=2101389221]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3/MarginContainer/VBoxContainer" unique_id=1145091061]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "CARBOIDRATOS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3/MarginContainer/VBoxContainer" unique_id=476733503]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "250 g"
+horizontal_alignment = 1
+
+[node name="Panel4" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=1697217202]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel4" unique_id=841350741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel4/MarginContainer" unique_id=237062101]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel4/MarginContainer/VBoxContainer" unique_id=1545867235]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "GORDURAS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel4/MarginContainer/VBoxContainer" unique_id=1994483414]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "70 g"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=203318041]
+custom_minimum_size = Vector2(0, 175)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_m8of3")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3" unique_id=2059257446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer" unique_id=859631127]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=621286983]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "ORIENTAÇÕES GERAIS"
+
+[node name="TextEdit" type="TextEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=617400715]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Beber água regularmente ao longo do dia.
+Priorizar alimentos in natura ou minimamente processados.
+As quantidades apresentadas devem ser consideradas conforme orientação profissional.
+Em caso de substituição, utilizar alimentos equivalentes conforme orientação."
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=777271334]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=865649191]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=1802141536]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=728997480]
+layout_mode = 2
+placeholder_text = "e-mail"
+alignment = 1
+
+[node name="LineEdit2" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=131103439]
+layout_mode = 2
+placeholder_text = "telefone"
+alignment = 1
+
+[node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=1097536625]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=1784399781]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=442604171]
+layout_mode = 2
+text = "
+"
+
+[node name="HSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=1055714553]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer" unique_id=15027291]
+layout_mode = 2
+text = "Nutricionista"
+horizontal_alignment = 1

@@ -34,6 +34,14 @@ var filtros = {
 func _ready() -> void:
 	visible = false
 	GlobalManager.atalhos["lista_medidores_visiveis"] = self
+	
+	if 	GlobalManager.paciente_aberto.has("medidores"):
+		filtros = GlobalManager.paciente_aberto["medidores"]
+	else:
+		GlobalManager.paciente_aberto["medidores"] = filtros
+		GlobalManager.salvar_paciente_aberto()
+		
+	
 	var aq = "res://prefab/plano_alimentar/editar_limite_medidor.res"
 	for i in filtros:
 		var d = {"id": i, "dados" : filtros[i]}
@@ -56,6 +64,10 @@ func _on_btn_fechar_pressed() -> void:
 		if filtros[i][1] == true:
 			var d = {"id": i, "dados" : filtros[i]}
 			GlobalManager.adicionar_cena_como_filho(aq2,medidores_atalho,d)
+	
+	GlobalManager.paciente_aberto["medidores"] = filtros
+	GlobalManager.salvar_paciente_aberto()
+
 
 func limpar():
 	for i in medidores_atalho.get_children():

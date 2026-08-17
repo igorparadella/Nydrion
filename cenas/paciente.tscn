@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://odtkjiehcb3x" path="res://scripts/paciente/avaliacao_atual_na_visao_geral.gd" id="2_xkunw"]
 [ext_resource type="Script" uid="uid://c43bvepdc6mxb" path="res://scripts/paciente/ver_anamnese.gd" id="4_2xt2k"]
 [ext_resource type="PackedScene" uid="uid://dyg2bmf3f1imy" path="res://prefab/paciente/proxima_consulta.res" id="4_gsoda"]
+[ext_resource type="Script" uid="uid://bh05suyfoyi1e" path="res://scripts/paciente/plano_alimentar_view.gd" id="5_pirvg"]
 [ext_resource type="PackedScene" uid="uid://5ff7y2h0ye2t" path="res://prefab/selecao_de_item.tscn" id="6_gsoda"]
 [ext_resource type="PackedScene" uid="uid://b2pjrgw50ag45" path="res://cenas/agenda.tscn" id="7_mmvfd"]
 
@@ -853,6 +854,7 @@ layout_mode = 2
 [node name="Panel3" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1305603973]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("5_pirvg")
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3" unique_id=1385008038]
 layout_mode = 1
@@ -887,68 +889,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=909031882]
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=1960374266]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1548712727]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=749290703]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer" unique_id=909031882]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Calorias"
-
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=543756864]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = " 125 g "
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=375212099]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=387198562]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Proteínas"
-
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=351655723]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = " 125 g "
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=420365680]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=8181012]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Carboidratos "
-
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1546796216]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = " 190 g "
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=204177078]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=734957232]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Gorduras"
-
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=864091536]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-text = " 55 g "
+size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=293421024]
 layout_mode = 2

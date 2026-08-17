@@ -13,6 +13,7 @@ var telas = {
 	"plano_alimentar": "res://cenas/plano_alimentar.tscn",
 	"novo_paciente": "res://cenas/novo_paciente.tscn",
 	"anamnese": "res://cenas/anamnese.tscn",
+	"imprimir": "res://prefab/imprimir.res",
 }
 
 
@@ -36,7 +37,6 @@ func _ready() -> void:
 		if data_valida(GlobalManager.config['agenda'][i]["consulta"]["dia"]) == false:
 			GlobalManager.config['agenda'].erase(i)
 			GlobalManager.salvar_config()
-
 
 func data_valida(data_a: String) -> bool:
 	var partes = data_a.replace("/", "_").split("_")

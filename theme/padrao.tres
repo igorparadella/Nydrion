@@ -61,6 +61,11 @@ bg_color = Color(0.44705883, 0.72156864, 0.4745098, 1)
 color = Color(0.44705883, 0.72156864, 0.4745098, 1)
 thickness = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2j6a4"]
+bg_color = Color(1, 1, 1, 0)
+border_width_bottom = 2
+border_color = Color(0.44705883, 0.72156864, 0.4745098, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhtby"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 2
@@ -2448,6 +2453,12 @@ HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_d8idb")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_d8idb")
 HSeparator/styles/separator = SubResource("StyleBoxLine_eehox")
 Label/colors/font_color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+LineEdit/colors/font_color = Color(0.42036086, 0.41477218, 0.4123707, 1)
+LineEdit/colors/font_placeholder_color = Color(0.41960785, 0.41960785, 0.41960785, 0.827451)
+LineEdit/colors/font_selected_color = Color(0, 0, 0, 1)
+LineEdit/styles/focus = SubResource("StyleBoxFlat_2j6a4")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_2j6a4")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_2j6a4")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10

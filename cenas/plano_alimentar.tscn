@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cqga47rxm8g8t" path="res://scripts/paciente/plano_alimentar/panel_2_descricao_alimento.gd" id="5_xo78a"]
 [ext_resource type="Script" uid="uid://c7ncidxcy4y5s" path="res://scripts/paciente/plano_alimentar/editar_medidores.gd" id="6_1iu5i"]
 [ext_resource type="PackedScene" uid="uid://cujw56c3dmypw" path="res://prefab/plano_alimentar/editar_limite_medidor.res" id="7_yv6ku"]
+[ext_resource type="Script" uid="uid://d3jh808i8typ1" path="res://scripts/paciente/plano_alimentar/modelos.gd" id="9_74fs5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7ugd"]
 bg_color = Color(0.4210918, 0.4210918, 0.42109165, 0.46666667)
@@ -19,6 +20,9 @@ content_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eehox"]
 bg_color = Color(0.6, 0.6, 0.6, 0.5176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cxg2"]
+bg_color = Color(0.6, 0.6, 0.6, 0.6627451)
 
 [node name="Control" type="Control" unique_id=1361814560]
 layout_mode = 3
@@ -73,7 +77,7 @@ theme_override_font_sizes/font_size = 18
 text = "Plano alimentar"
 horizontal_alignment = 1
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=83867646]
+[node name="btn_modelos" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=83867646]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Modelos"
@@ -110,7 +114,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Adicionar nova refeição"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1136976043]
+[node name="btn_imprimir" type="Button" parent="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1136976043]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -627,8 +631,113 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="modelos" type="Panel" parent="." unique_id=324355068]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cxg2")
+script = ExtResource("9_74fs5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="modelos" unique_id=1245312873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="modelos/HBoxContainer" unique_id=749021630]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="modelos/HBoxContainer" unique_id=1604240037]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="modelos/HBoxContainer/VBoxContainer" unique_id=1519453113]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="modelos/HBoxContainer/VBoxContainer" unique_id=1183788887]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel" unique_id=1977432754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer" unique_id=89470534]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=2020740299]
+layout_mode = 2
+
+[node name="btn_fechar" type="Button" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1329226227]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fechar"
+
+[node name="Label" type="Label" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1370922576]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Modelos"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1141703004]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1129564914]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=799525599]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=509805178]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1815900213]
+layout_mode = 2
+text = "Novo do modelo:"
+
+[node name="TextEdit" type="TextEdit" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=706854354]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_salvar" type="Button" parent="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=2018325804]
+layout_mode = 2
+text = "Salvar"
+
+[node name="Control2" type="Control" parent="modelos/HBoxContainer/VBoxContainer" unique_id=901759338]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="modelos/HBoxContainer" unique_id=862564510]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_voltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_modelos" to="modelos" method="_on_btn_modelos_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_abrir_nova_refeicao" to="." method="_on_btn_abrir_nova_refeicao_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_imprimir" to="." method="_on_btn_imprimir_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/btn_editar_medidor" to="." method="_on_btn_editar_medidor_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_fechar" to="Panel_novo_alimento" method="_on_btn_fechar_pressed"]
 [connection signal="text_changed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit" to="Panel_novo_alimento" method="_on_text_edit_text_changed"]
@@ -638,3 +747,5 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/btn_menos" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_menos_pressed"]
 [connection signal="pressed" from="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento/MarginContainer/VBoxContainer/btn_adicionar" to="Panel_novo_alimento/HBoxContainer/VBoxContainer/HBoxContainer/Panel2_descricao_alimento" method="_on_btn_adicionar_pressed"]
 [connection signal="pressed" from="editar_medidores/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/btn_fechar" to="editar_medidores" method="_on_btn_fechar_pressed"]
+[connection signal="pressed" from="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_fechar" to="modelos" method="_on_btn_fechar_pressed"]
+[connection signal="pressed" from="modelos/HBoxContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/btn_salvar" to="modelos" method="_on_btn_salvar_pressed"]

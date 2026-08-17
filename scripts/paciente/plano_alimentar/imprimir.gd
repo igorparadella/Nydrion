@@ -9,8 +9,13 @@ const TAMANHO_FOLHA := Vector2i(2480, 3508)
 
 var imagem_para_salvar: Image
 
+@onready var local: Control = $SubViewportContainer/SubViewport/Control
 
-func _ready() -> void:
+var dados = {}
+
+
+func imprimir():
+	aplicar_dados()
 	# Define o tamanho real da folha
 	sub_viewport.size = TAMANHO_FOLHA
 
@@ -106,3 +111,8 @@ func abrir_dialogo_salvar() -> void:
 		printerr("Erro ao salvar imagem: ", erro)
 
 	imagem_para_salvar = null
+
+
+func aplicar_dados():
+	
+	pass

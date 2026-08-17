@@ -50,3 +50,8 @@ func _on_btn_voltar_pressed() -> void:
 
 func _on_btn_editar_medidor_pressed() -> void:
 	$editar_medidores.visible = true
+
+
+func _on_btn_imprimir_pressed() -> void:
+	GlobalManager.atalhos["main"].abrir_tela("imprimir")
+	pass # Replace with function body.

@@ -477,9 +477,35 @@ func _on_text_edit_instagram_text_changed() -> void:
 func _on_text_edit_site_text_changed() -> void:
 	info["dados"]["clinica"]["site"] = $VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer5/TextEdit_site.text
 
+@onready var control: Control = $Control
+@onready var texture_rect_preview: TextureRect = $VBoxContainer2/HBoxContainer/clinica/MarginContainer/VBoxContainer/HBoxContainer7/TextureRect_preview
 
 func _on_btn_carregar_logo_pressed() -> void:
-	pass # Replace with function body.
+	var c = await control.selecionar_arquivo()
+	if c != null:
+		carregar_logo(c)
+
+func carregar_logo(caminho: String) -> void:
+	if not FileAccess.file_exists(caminho):
+		printerr("Arquivo não encontrado: ", caminho)
+		return
+	
+	info["dados"]["clinica"]["icone"] = caminho
+	var arquivo := FileAccess.open(caminho, FileAccess.READ)
+	var dados := arquivo.get_buffer(arquivo.get_length())
+	arquivo.close()
+
+	var imagem := Image.new()
+	var erro := imagem.load_svg_from_buffer(dados)
+
+	if erro != OK:
+		printerr("Erro ao carregar imagem: ", erro)
+		return
+
+	texture_rect_preview.texture = ImageTexture.create_from_image(imagem)
+
+
+
 
 
 func _on_text_edit_usuario_text_changed() -> void:
