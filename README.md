@@ -102,7 +102,7 @@ O projeto também está aberto à colaboração da comunidade. Sugestões, melho
 
 A versão atual do Nydrion pode ser baixada diretamente pelo repositório:
 
-**[⬇️ Baixar Nydrion](https://github.com/igorparadella/nutri/raw/refs/heads/main/github/versao_atual/Nydrion.zip)**
+**[⬇️ Baixar Nydrion](https://github.com/igorparadella/Nydrion/raw/refs/heads/main/github/versao_atual/Nydrion.zip)**
 
 ---
 
