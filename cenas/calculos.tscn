@@ -52,7 +52,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1044637356]
 layout_mode = 2
-text = "Adicionar um formula"
+text = "Adicionar um fórmula"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1058687133]
@@ -65,7 +65,7 @@ placeholder_text = "Ex: IMC"
 
 [node name="Label3" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1624899087]
 layout_mode = 2
-text = "Exprecao: "
+text = "Expressão: "
 
 [node name="LineEdit2" type="LineEdit" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1545818451]
 layout_mode = 2
