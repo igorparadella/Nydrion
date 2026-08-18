@@ -40,7 +40,6 @@ grow_vertical = 2
 script = ExtResource("4_h6dyf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=211954545]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,7 +85,12 @@ horizontal_alignment = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=244304294]
 layout_mode = 2
 size_flags_vertical = 3
-text = "adsfadfadf"
+bbcode_enabled = true
+text = "Que bom ter você por aqui!
+
+Este aplicativo foi pensado para tornar sua rotina mais simples, organizada e prática. Aqui, você poderá acompanhar suas informações, organizar seus planos e ter tudo o que precisa em um só lugar.
+
+Explore o aplicativo, personalize suas informações e aproveite todas as ferramentas disponíveis."
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1573820864]
 layout_mode = 2
@@ -111,6 +115,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=869613767]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

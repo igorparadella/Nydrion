@@ -1,4 +1,5 @@
 {
-    "version": "0.0.1",
-    "url": "https://github.com/igorparadella/nutri"
+  "version": "0.0.2",
+  "url": "https://github.com/igorparadella/Nydrion",
+  "o_que_tem_de_novo": "Nova tela de cálculos! Agora você pode criar e salvar suas próprias fórmulas e, depois, basta preencher os valores para realizar os cálculos automaticamente."
 }

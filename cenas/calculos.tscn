@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://cbvfi33g4u0yv"]
 
+[ext_resource type="Script" uid="uid://c2ekqc5nqgjxf" path="res://scripts/calculos/calculos.gd" id="1_rcxjr"]
+[ext_resource type="PackedScene" uid="uid://cc1de0h0t3v85" path="res://prefab/calculos/formula.res" id="2_25vj7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gegjm"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+
 [node name="Control" type="Control" unique_id=381688609]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +15,71 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rcxjr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=507747828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gegjm")
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=368686106]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 0)
+columns = 4
+
+[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer" unique_id=166232864]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/GridContainer/Panel" unique_id=2022719082]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/GridContainer/Panel/MarginContainer" unique_id=1103855502]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1044637356]
+layout_mode = 2
+text = "Adicionar um formula"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1058687133]
+layout_mode = 2
+text = "Nome:  "
+
+[node name="LineEdit" type="LineEdit" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1753225024]
+layout_mode = 2
+placeholder_text = "Ex: IMC"
+
+[node name="Label3" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1624899087]
+layout_mode = 2
+text = "Exprecao: "
+
+[node name="LineEdit2" type="LineEdit" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1545818451]
+layout_mode = 2
+placeholder_text = "Ex: peso/(altura*altura)"
+
+[node name="Label4" type="Label" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=989578051]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Button" type="Button" parent="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer" unique_id=1643634599]
+layout_mode = 2
+text = "Salvar"
+
+[node name="Panel2" parent="ScrollContainer/GridContainer" unique_id=1921035893 instance=ExtResource("2_25vj7")]
+layout_mode = 2
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

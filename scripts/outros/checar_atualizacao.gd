@@ -6,17 +6,20 @@ const printar = false
 # CONFIGURAÇÃO
 # ============================================================
 
-const VERSAO_ATUAL := "0.0.0"
+var VERSAO_ATUAL := "0.0.0"
 
-const VERSION_URL := "https://raw.githubusercontent.com/igorparadella/nutri/main/version.json"
-
+const VERSION_URL := "https://raw.githubusercontent.com/igorparadella/Nydrion/main/version.json"
+var url = ""
 # ============================================================
 # INICIALIZAÇÃO
 # ============================================================
 
 func _ready() -> void:
 	request_completed.connect(_on_request_completed)
-
+	
+	var a = GlobalManager.carregar("res://version.json")
+	VERSAO_ATUAL = a["version"]
+	$"../Panel".visible = false
 	verificar_atualizacao()
 
 
@@ -125,8 +128,12 @@ func _on_request_completed(
 		if printar: print("🚀 NOVA ATUALIZAÇÃO DISPONÍVEL!")
 
 		if dados.has("url"):
+			$"../Panel".visible = true
+			url = dados["url"]
 			if printar: print("Download: ", dados["url"])
 
+		if dados.has("o_que_tem_de_novo"):
+			$"../Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/RichTextLabel".text = dados["o_que_tem_de_novo"]
 	else:
 
 		if printar: print("✅ O projeto está atualizado.")
@@ -174,3 +181,12 @@ func existe_atualizacao(
 
 	# São exatamente iguais
 	return false
+
+
+func _on_btn_abrir_pressed() -> void:
+	OS.shell_open(url)
+	$"../Panel".visible = false
+
+
+func _on_btn_fechar_pressed() -> void:
+	$"../Panel".visible = false

@@ -18,6 +18,9 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_eehox"]
 gradient = SubResource("Gradient_mtgg2")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eehox"]
+bg_color = Color(0.40392157, 0.40392157, 0.40392157, 0.60784316)
+
 [node name="Control" type="Control" unique_id=1081668130]
 layout_mode = 3
 anchors_preset = 15
@@ -119,8 +122,101 @@ theme_override_constants/separation = 0
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Panel" type="Panel" parent="." unique_id=894198317]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eehox")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1806401695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer" unique_id=1222180560]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1780521231]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1231437624]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer" unique_id=2009579256]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel" unique_id=86831135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer" unique_id=950132860]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1489284516]
+layout_mode = 2
+
+[node name="btn_fechar" type="Button" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=385788346]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fechar"
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1854934405]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Nova versão diponível"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1822035218]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=904084671]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Sobre a nova versão"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=136654828]
+layout_mode = 2
+
+[node name="btn_abrir" type="Button" parent="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1306635077]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Baixar nova versão"
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1557267466]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer" unique_id=649745779]
+layout_mode = 2
+size_flags_vertical = 3
+
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_visao_geral" to="." method="_on_btn_visao_geral_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_pacientes" to="." method="_on_btn_pacientes_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_agenda" to="." method="_on_btn_agenda_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/btn_calculos" to="." method="_on_btn_calculos_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureRect/MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/btn_fechar" to="HTTPRequest" method="_on_btn_fechar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2/btn_abrir" to="HTTPRequest" method="_on_btn_abrir_pressed"]

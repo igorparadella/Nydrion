@@ -32,11 +32,14 @@ func _ready() -> void:
 	#print(GlobalManager.caminho,"config.json")
 	
 	abrir_tela("visao_geral")
-	
-	for i in GlobalManager.config['agenda']:
-		if data_valida(GlobalManager.config['agenda'][i]["consulta"]["dia"]) == false:
-			GlobalManager.config['agenda'].erase(i)
-			GlobalManager.salvar_config()
+	if GlobalManager.config.has("agenda"):
+		for i in GlobalManager.config['agenda']:
+			if data_valida(GlobalManager.config['agenda'][i]["consulta"]["dia"]) == false:
+				GlobalManager.config['agenda'].erase(i)
+				GlobalManager.salvar_config()
+
+
+
 
 func data_valida(data_a: String) -> bool:
 	var partes = data_a.replace("/", "_").split("_")

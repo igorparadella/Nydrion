@@ -12,7 +12,26 @@ var imagem_para_salvar: Image
 @onready var local: Control = $SubViewportContainer/SubViewport/Control
 
 var dados = {}
+@onready var refeicoes: VBoxContainer = $SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer
 
+
+func _ready() -> void:
+	for i in GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"]:
+		var aq = "res://prefab/imprimir/tabela.res"
+		var v = {
+			"data" : GlobalManager.paciente_aberto["plano_alimentar"]["refeicoes"][i]
+		}
+		GlobalManager.adicionar_cena_como_filho(aq,refeicoes,v)
+	
+	
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/Label2.text = dados["e-mail"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/Label3.text = dados["telefone"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer/RichTextLabel.text = dados["orientacoes_gerais"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/LineEdit.text = dados["orientacao"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer/VBoxContainer/Label2.text = dados["objetivo"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer/Label2.text = dados["data"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer/Label2.text = dados["nome"]
+	$SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/TextureRect.texture = dados["icone"]
 
 func imprimir():
 	aplicar_dados()

@@ -14,7 +14,7 @@ var caminho = ""
 var pacientes = {}
 var paciente_aberto = {}
 
-var config
+var config = {}
 
 var cores := {
 	"branco": Color(0xffffffff),

@@ -6,12 +6,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7ugd"]
 bg_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx4lu"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 0.0
-content_margin_bottom = 10.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65d1j"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 2
@@ -39,6 +33,7 @@ offset_bottom = 40.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1505211446]
 handle_input_locally = false
+size = Vector2i(2480, 3508)
 render_target_update_mode = 4
 
 [node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1604210990]
@@ -47,10 +42,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -984.0
-offset_top = -1498.0
-offset_right = 984.0
-offset_bottom = 1498.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -70,24 +61,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
 
 [node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer" unique_id=172429497]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_qx4lu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer" unique_id=1024824866]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-offset_transform_enabled = true
 offset_transform_position = Vector2(-10, 0)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=290513933]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1021320329]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 2
 texture = ExtResource("2_suxq8")
 expand_mode = 1
 stretch_mode = 5
@@ -104,17 +98,17 @@ size_flags_horizontal = 3
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1983963303]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 30
 text = "PLANO ALIMENTAR"
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1770530379]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "Plano nutricional individualizado"
 horizontal_alignment = 2
 
-[node name="HSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1617535945]
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1094222023]
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=854327896]
@@ -140,13 +134,12 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=454800358]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "PACIENTE"
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel/MarginContainer/VBoxContainer" unique_id=124619522]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "João da Silva "
 
 [node name="Panel2" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=208894076]
@@ -167,13 +160,12 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=796629660]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "DATA"
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2/MarginContainer/VBoxContainer" unique_id=804680796]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "17/08/2026 "
 
 [node name="Panel3" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=1068092194]
@@ -194,13 +186,12 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer/VBoxContainer" unique_id=362729164]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "OBJETIVO"
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Panel3/MarginContainer/VBoxContainer" unique_id=82122580]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "Manutenção"
 
 [node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2091211817]
@@ -223,7 +214,6 @@ layout_mode = 2
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=447331718]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
 text = "Orientação: "
 
 [node name="LineEdit" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer" unique_id=571069252]
@@ -240,6 +230,7 @@ layout_mode = 2
 size_flags_vertical = 6
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1685408690]
+visible = false
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 theme_override_constants/separation = -2
@@ -262,14 +253,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel/MarginContainer/VBoxContainer" unique_id=1409770263]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "ENERGIA"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel/MarginContainer/VBoxContainer" unique_id=1852765890]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "2.100 kcal"
 horizontal_alignment = 1
 
@@ -291,14 +281,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2/MarginContainer/VBoxContainer" unique_id=484041688]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "PROTEÍNAS"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2/MarginContainer/VBoxContainer" unique_id=1203035131]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "120 g"
 horizontal_alignment = 1
 
@@ -320,14 +309,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3/MarginContainer/VBoxContainer" unique_id=1145091061]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "CARBOIDRATOS"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel3/MarginContainer/VBoxContainer" unique_id=476733503]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "250 g"
 horizontal_alignment = 1
 
@@ -349,7 +337,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Panel4/MarginContainer/VBoxContainer" unique_id=1545867235]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "GORDURAS"
 horizontal_alignment = 1
 
@@ -380,10 +367,9 @@ layout_mode = 2
 [node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=621286983]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
 text = "ORIENTAÇÕES GERAIS"
 
-[node name="TextEdit" type="TextEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=617400715]
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/Panel3/MarginContainer/VBoxContainer" unique_id=823692406]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Beber água regularmente ao longo do dia.
@@ -404,15 +390,19 @@ size_flags_vertical = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=728997480]
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=1481362676]
 layout_mode = 2
-placeholder_text = "e-mail"
-alignment = 1
+size_flags_vertical = 3
+text = "e-mail"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="LineEdit2" type="LineEdit" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=131103439]
+[node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2" unique_id=834872697]
 layout_mode = 2
-placeholder_text = "telefone"
-alignment = 1
+size_flags_vertical = 3
+text = "telefone"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/Control/Panel/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4" unique_id=1097536625]
 layout_mode = 2
